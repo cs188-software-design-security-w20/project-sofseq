@@ -1,7 +1,14 @@
 # project-sofseq
 
-## Things to know:
+## How to run the application locally:
+- Clone this repo
+- `cd [path to this repo]/refume`
+- `bundle install`
+- `rails db:migrate`
+- `rails server`
+- Go to http://localhost:3000/
 
+## Things to know:
 This is literally just a skeleton Rails app right now.  We'll add stuff soon, though!
 
 Versions of important dev tools used for this project:
