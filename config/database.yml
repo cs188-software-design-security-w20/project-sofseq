@@ -19,3 +19,9 @@ development:
 test:
   <<: *default
   database: db/test.sqlite3
+
+production:
+  <<: *default
+  database: refume_production
+  username: refume
+  password: <%= ENV['REFUME_DATABASE_PASSWORD'] %>
