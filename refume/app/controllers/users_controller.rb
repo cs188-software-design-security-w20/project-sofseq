@@ -19,6 +19,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def mentors
+    @matches = Match.where(mentee_id: @author.id)
+  end
+
+  def mentees
+    @matches = Match.where(mentor_id: @author.id)
+  end
+
   private
     #handle mass assignment
     def user_params
