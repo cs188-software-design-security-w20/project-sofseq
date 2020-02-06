@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mentor:</strong>
+  <%= @match.mentor_id %>
+</p>
+
+<p>
+  <strong>Mentee:</strong>
+  <%= @match.mentee_id %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @match.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @match.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_match_path(@match) %> |
+<%= link_to 'Back', matches_path %>
