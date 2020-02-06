@@ -1,4 +1,5 @@
-<% provide(:title, "Register") %>
+<!--
+< % provide(:title, "Register") %>
 
 <h2 style="text-align: center;">Register</h2>
 <h4 style="text-align: center;">I want to be a ... </h4>
@@ -15,3 +16,42 @@
   Bio: <textarea rows="8" cols="50" name="bio"></textarea><br>
   <input type="submit" value="Submit">
 </form>
+-->
+
+<% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+
+      <%= f.label :age %>
+      <%= f.number_field :age %>
+
+      <%= f.label :zipcode %>
+      <%= f.number_field :zipcode %>
+
+      <%= f.label :country %>
+      <%= f.text_field :country %>
+
+      <%= f.label :language %>
+      <%= f.text_field :language %>
+
+      <%= f.label :goals %>
+      <%= f.text_area :goals %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
