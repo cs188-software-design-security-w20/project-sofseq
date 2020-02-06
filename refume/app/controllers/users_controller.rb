@@ -2,8 +2,8 @@ class UsersController < ApplicationController
   def show
     #find_by method automatically does the sanity check on user input
     #to prevent SQL injection
-    #@user = User.find_by(params[:id])
-    @user = User.find(params[:id])
+    #@user = User.find(params[:id])
+    @user = User.find_by_id(params[:id])
   end
 
   def new
