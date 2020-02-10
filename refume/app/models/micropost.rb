@@ -6,7 +6,7 @@ class Micropost < ApplicationRecord
 
 	def user_exists
 		begin
-			@user = User.find(user_id)
+			@user = User.find_by_id(user_id)
 		rescue ActiveRecord::RecordNotFound => e
 			errors.add(:user_id, "The user identity associated with this post is invalid.")
 		end
@@ -14,7 +14,7 @@ class Micropost < ApplicationRecord
 
 	def category_exists
 		begin
-			@category = Category.find(category_id)
+			@category = Category.find_by_id(category_id)
 		rescue ActiveRecord::RecordNotFound => e
 			errors.add(:category_id, "The category associated with this post is invalid.")
 		end
