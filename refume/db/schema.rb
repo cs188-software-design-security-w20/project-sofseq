@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200213193422) do
+ActiveRecord::Schema.define(version: 20200213195414) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20200213193422) do
     t.string "password_digest"
     t.string "language"
     t.text "bio"
+    t.string "remember_digest"
   end
 
 end

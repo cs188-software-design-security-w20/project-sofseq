@@ -8,10 +8,46 @@ module SessionsHelper
     session[:user_id] = user.id
   end
 
-  # Returns the current logged-in user (if any).
+  # Remembers a user in a persistent session.
+  # First, generating a remember token and saving its digest to the database
+  # Then use cookies method to create permanent cookies for the user id and remember token.
+  def remember(user)
+    user.remember
+    cookies.permanent.signed[:user_id] = user.id
+    cookies.permanent[:remember_token] = user.remember_token
+  end
+
+  # Forgets a persistent session.
+  def forget(user)
+    user.forget
+    cookies.delete(:user_id)
+    cookies.delete(:remember_token)
+  end
+
+  # Returns the user corresponding to the remember token cookie.
   def current_user
-    if session[:user_id]
-      @current_user ||= User.find_by(id: session[:user_id])
+=begin
+    #return the current logged-in user (temporary session)
+    if (user_id = session[:user_id])
+      @current_user ||= User.find_by(id: user_id)
+
+    #check cookie (permanent session)
+    elsif (user_id = cookies.signed[:user_id])
+      user = User.find_by(id: user_id)
+      if user && user.authenticated?(cookies[:remember_token])
+        log_in user
+        @current_user = user
+      end
+    end
+=end
+    # If a user click the remember_me checkbox, the user will be remembered even if he/she closes
+    # the browser untilt they log out. 
+    if (user_id = cookies.signed[:user_id])
+      user = User.find_by(id: user_id)
+      if user && user.authenticated?(cookies[:remember_token])
+        log_in user
+        @current_user = user
+      end
     end
   end
 
@@ -22,6 +58,7 @@ module SessionsHelper
 
   # Logs out the current user.
   def log_out
+    forget(current_user)
     session.delete(:user_id)
     @current_user = nil
   end
