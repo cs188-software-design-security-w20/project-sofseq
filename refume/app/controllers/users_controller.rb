@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   # To update personal information, the user must already log in;
   # and that user can only modify his/her own information.
   before_action :logged_in_user, only: [:edit, :update]
-  before_action :correct_user,   only: [:edit, :update]
+  before_action :correct_user,   only: [:edit, :update, :show]
 
   def show
     #find_by method automatically does the sanity check on user input
