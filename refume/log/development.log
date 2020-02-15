@@ -4469,3 +4469,119 @@ Processing by PasswordResetsController#create as HTML
 Completed 200 OK in 60ms (Views: 53.0ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/password_resets/new" for ::1 at 2020-02-14 20:56:33 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+Completed 200 OK in 1845ms (Views: 1839.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2020-02-14 20:56:40 -0800
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PeS2SjOXxd/MOav0Y8mXzuUArj5s54xDOcVKLt1aSHa8MASkPIjjZK7TobkMNpHHkjriy868kvXtp8GsoctubQ==", "password_reset"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ben@ben.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$7IsOLuAoSv/.dHTUMBzSWeRqL0M213Q8mAN3ryCvj.dDJ8b.50n4m"], ["updated_at", "2020-02-15 04:56:40.771093"], ["id", 7]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2020-02-15 04:56:40.777022"], ["reset_sent_at", "2020-02-15 04:56:40.776210"], ["id", 7]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+UserMailer#password_reset: processed outbound mail in 0.3ms
+Completed 500 Internal Server Error in 382ms (ActiveRecord: 6.3ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/mailers/user_mailer.rb:18:in `password_reset'
+app/controllers/password_resets_controller.rb:15:in `create'
+Started POST "/password_resets" for ::1 at 2020-02-14 20:57:25 -0800
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PeS2SjOXxd/MOav0Y8mXzuUArj5s54xDOcVKLt1aSHa8MASkPIjjZK7TobkMNpHHkjriy868kvXtp8GsoctubQ==", "password_reset"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ben@ben.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$10$iLo1UgLiSUjdFrPLwcceZOuH3rocCOpaQ6EXbQPS48PXTn45a8dZe"], ["updated_at", "2020-02-15 04:57:25.160557"], ["id", 7]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2020-02-15 04:57:25.170121"], ["reset_sent_at", "2020-02-15 04:57:25.169244"], ["id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (1.7ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.7ms)
+UserMailer#password_reset: processed outbound mail in 259.9ms
+Sent mail to ben@ben.com (8.8ms)
+Date: Fri, 14 Feb 2020 20:57:25 -0800
+From: noreply@refume.com
+To: ben@ben.com
+Message-ID: <5e477a356c428_f5da3fd1b7eb5d70755df@Howards-MBP-2.mail>
+Subject: Password reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e477a356aadc_f5da3fd1b7eb5d70754cd";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e477a356aadc_f5da3fd1b7eb5d70754cd
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+To reset your password click the link below:
+
+http://localhost:3000/password_resets/rxxmXT5RnlUPJROuj2ubMQ/edit?email=ben%40ben.com
+
+This link will expire in two hours.
+
+If you did not request your password to be reset, please ignore this email and
+your password will stay as it is.
+
+
+----==_mimepart_5e477a356aadc_f5da3fd1b7eb5d70754cd
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Password reset</h1>
+
+<p>To reset your password click the link below:</p>
+
+<a href="http://localhost:3000/password_resets/rxxmXT5RnlUPJROuj2ubMQ/edit?email=ben%40ben.com">Reset password</a>
+
+<p>This link will expire in two hours.</p>
+
+<p>
+If you did not request your password to be reset, please ignore this email and
+your password will stay as it is.
+</p>
+
+  </body>
+</html>
+
+----==_mimepart_5e477a356aadc_f5da3fd1b7eb5d70754cd--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 360ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/" for ::1 at 2020-02-14 20:57:27 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
