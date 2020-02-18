@@ -24,6 +24,9 @@
       <%= f.label :language %>
       <%= f.text_field :language, class: 'form-control' %>
 
+      <%= f.label :role, 'I want to be a ...' %>
+      <%= f.select :role, [["Mentor", 'Mentor'], ["Mentee", 'Mentee'], ["Neither", 'Neither']]%>
+
       <%= f.label :goals %>
       <%= f.text_area :goals, class: 'form-control' %>
 

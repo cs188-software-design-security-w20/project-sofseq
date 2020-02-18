@@ -58,7 +58,7 @@ class UsersController < ApplicationController
     #handle mass assignment
     def user_params
       params.require(:user).permit(:name, :email, :age, :country, :language,
-                                   :zipcode, :goals, :bio, :password, :password_confirmation)
+                                   :type, :zipcode, :goals, :bio, :password, :password_confirmation)
     end
 
     # Before filters

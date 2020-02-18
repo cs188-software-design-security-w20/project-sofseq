@@ -10,6 +10,8 @@ class MatchesController < ApplicationController
   # GET /matches/1
   # GET /matches/1.json
   def show
+    @user = current_user
+    @match = params[:id]
   end
 
   # GET /matches/new
@@ -24,6 +26,7 @@ class MatchesController < ApplicationController
   # POST /matches
   # POST /matches.json
   def create
+    @user = current_user
     @match = Match.new(match_params)
 
     respond_to do |format|
