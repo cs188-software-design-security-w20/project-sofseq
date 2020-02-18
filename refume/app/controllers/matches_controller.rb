@@ -1,17 +1,26 @@
 class MatchesController < ApplicationController
-  before_action :set_match, only: [:show, :edit, :update, :destroy]
+  before_action :set_match, only: [:edit, :update, :destroy]
 
   # GET /matches
   # GET /matches.json
   def index
-    @matches = Match.all
+    #should be the following line when our matching feature is implemented
+    @user = current_user
+    #@matches = Match.All
   end
 
   # GET /matches/1
   # GET /matches/1.json
   def show
     @user = current_user
-    @match = params[:id]
+    #@match = params[:id]
+    #get all the matched mentors/mentees for this user
+    @matches = nil
+    if @user.role == "Mentee"
+      @matches = Match.where(mentee_id: @user.id)
+    elsif @user.role == "Mentor"
+      @matches = Match.where(mentor_id: @user.id)
+    end
   end
 
   # GET /matches/new

@@ -1,4 +1,7 @@
 <% provide(:title, @user.name) %>
+<% if @user.role %>
+  <h1 style="text-align:center;"> Match Records</h1>
+<% end %>
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
@@ -7,5 +10,28 @@
         <%= @user.name %>
       </h1>
     </section>
+    <% if @user.role %>
+      <%= @user.role %>
+    <% else %>
+      <%= "Regular User" %>
+    <% end %>
   </aside>
+</div>
+
+<div style="text-align:center;">
+  <% if @user.role == "Mentor" %>
+    <ol style="font-size:17px">
+    <% @mentees.each do |mentee| %>
+      <p><li><%= mentee %></li></p>
+    <% end %>
+    </ol>
+  <% elsif @user.role == "Mentee" %>
+    <ol style="font-size:17px">
+      <% @mentors.each do |mentor| %>
+      <p><li><%= mentor %></li></p>
+      <% end %>
+    </ol>
+  <% else %>
+    <%= "There is no match for this user yet." %>
+  <% end %>
 </div>

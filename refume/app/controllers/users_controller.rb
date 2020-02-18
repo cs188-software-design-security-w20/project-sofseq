@@ -9,6 +9,28 @@ class UsersController < ApplicationController
     #to prevent SQL injection
     #@user = User.find(params[:id])
     @user = User.find_by_id(params[:id])
+    #get all the matched mentors/mentees for this user
+    @matches = nil
+    if @user.role == "Mentee"
+      @matches = Match.where(mentee_id: @user.id)
+    elsif @user.role == "Mentor"
+      @matches = Match.where(mentor_id: @user.id)
+    end
+
+    #retrieve all the mentors/mentees names
+    @mentors = []
+    @mentees = []
+    @matches = [] if @meatches.nil?
+    @matches.each do |match|
+      if @user.role == "Mentor"
+        user = User.find_by_id(match.mentee_id)
+        @mentees << user.name
+      else
+        user = User.find_by_id(match.mentor_id)
+        @mentors << user.name
+      end
+    end
+
   end
 
   def new
@@ -47,18 +69,18 @@ class UsersController < ApplicationController
   end
 
   def mentors
-    @matches = Match.where(mentee_id: @author.id)
+    @matches = Match.where(mentee_id: @user.id)
   end
 
   def mentees
-    @matches = Match.where(mentor_id: @author.id)
+    @matches = Match.where(mentor_id: @user.id)
   end
 
   private
     #handle mass assignment
     def user_params
       params.require(:user).permit(:name, :email, :age, :country, :language,
-                                   :type, :zipcode, :goals, :bio, :password, :password_confirmation)
+                                   :role, :zipcode, :goals, :bio, :password, :password_confirmation)
     end
 
     # Before filters

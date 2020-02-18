@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   get    '/login',         to: 'sessions#new'
   post   '/login',         to: 'sessions#create'
   delete '/logout',        to: 'sessions#destroy'
-  post   '/matches/new',  to: 'matches#create'
+  post   '/matches/new',   to: 'matches#create'
+  get    '/mathces/:id',  to: 'matches#show'
   resources :users
   resources :matches
   resources :account_activations, only: [:edit]

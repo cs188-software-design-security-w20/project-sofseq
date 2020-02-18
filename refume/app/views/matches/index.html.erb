@@ -1,24 +1,9 @@
-<% provide(:title, "Role Selection") %>
-<h2>I want to be a ...</h2>
+<% provide(:title, "Match result") %>
 <br>
 <div class="row" style="text-align:center;">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(:user, url: select_path) do |f| %>
-      <%= f.label :Mentor_type, 'Mentor' %>
-      <%= f.radio_button :type, 'mentor' %>
-
-      <br>
-      <%= f.label :Mentee_type, 'Mentee' %>
-      <%= f.radio_button :type, 'mentee' %>
-
-      <br>
-      <%= f.label :Neither_type, 'Neither' %>
-      <%= f.radio_button :type, 'neither' %>
-      <br>
-      <%= f.submit "Confirm", class: "btn btn-primary" %>
-    <% end %>
-
+    <%= link_to 'Get Match', "/matches/#{@user.id}", {:style => 'font-size:20px;'} %>
   </div>
 </div>
 
-<!-- < %= link_to 'New Match', new_match_path %> -->
+<!-- < %= link_to 'New Match', new_match_path "/matches/#{@user.id}" %> -->
