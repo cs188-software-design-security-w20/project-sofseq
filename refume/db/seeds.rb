@@ -25,6 +25,13 @@ bio_arr = ["My family is very important to me, and I grew up living with three s
                  password_digest:       password,
                  language: language_arr[n],
                  bio: bio_arr[n],
-                 role: n < n-1 ? "mentor" : "mentee",
+                 role: n < n-2 ? "mentor" : "mentee",
                  activated: true)
   end
+
+  4.times do |n|
+    Match.create!(mentee_id: n+1,
+                 mentor_id: (n+1).even? ? 5 : 6)
+  end
+
+
