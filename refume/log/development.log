@@ -18017,6 +18017,133 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
 
 
+<<<<<<< HEAD
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/matches" for ::1 at 2020-02-18 10:38:08 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (78.5ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+Completed 200 OK in 2536ms (Views: 2527.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/select" for ::1 at 2020-02-18 10:38:21 -0800
+  
+AbstractController::ActionNotFound (The action 'role_select' could not be found for UsersController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/select" for ::1 at 2020-02-18 10:38:27 -0800
+  
+AbstractController::ActionNotFound (The action 'role_select' could not be found for UsersController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/select" for ::1 at 2020-02-18 10:38:30 -0800
+  
+AbstractController::ActionNotFound (The action 'role_select' could not be found for UsersController):
+=======
 Started GET "/login" for ::1 at 2020-02-18 10:55:07 -0800
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by SessionsController#new as HTML
@@ -18124,6 +18251,7 @@ Completed 200 OK in 31ms (Views: 26.7ms | ActiveRecord: 0.3ms)
 Started GET "/users/" for ::1 at 2020-02-18 11:09:04 -0800
   
 AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+>>>>>>> 825ec76f090e3b6d75ea46419746893bba260ae3
   
 actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
 actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
@@ -18136,7 +18264,11 @@ actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
 actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
 actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
 rack (2.1.2) lib/rack/etag.rb:27:in `call'
+<<<<<<< HEAD
+rack (2.1.2) lib/rack/conditional_get.rb:40:in `call'
+=======
 rack (2.1.2) lib/rack/conditional_get.rb:27:in `call'
+>>>>>>> 825ec76f090e3b6d75ea46419746893bba260ae3
 rack (2.1.2) lib/rack/head.rb:14:in `call'
 rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
 rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
@@ -18175,6 +18307,242 @@ puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
 puma (3.12.2) lib/puma/server.rb:476:in `process_client'
 puma (3.12.2) lib/puma/server.rb:334:in `block in run'
 puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/" for ::1 at 2020-02-18 10:38:39 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 54ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/help" for ::1 at 2020-02-18 10:38:42 -0800
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 10:38:46 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 55ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-18 10:38:51 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 70ms (Views: 46.9ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-1@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miss Kory Reynolds"], ["email", "stewart.dulaney-1@gmail.com"], ["age", 1], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Italy"], ["goals", "I want to start my own company."], ["created_at", "2020-02-18 19:49:33.815407"], ["updated_at", "2020-02-18 19:49:33.815407"], ["password_digest", "password"], ["language", "English,Spanish,Italian,German"], ["bio", "My family is very important to me, and I grew up living with three sisters and a brother."], ["activation_digest", "$2a$10$ibDBqTycf9KUGtFyVnL9s.Z/cHDf9W0UoGl9f2sXRSjcRxGp0fhXW"], ["role", "mentee"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-2@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Willard Daniel"], ["email", "stewart.dulaney-2@gmail.com"], ["age", 2], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Iraq"], ["goals", "Set aside money for my children's education."], ["created_at", "2020-02-18 19:49:33.879515"], ["updated_at", "2020-02-18 19:49:33.879515"], ["password_digest", "password"], ["language", "Arabic"], ["bio", "I am 20 year old interested in technology, IT and computer science."], ["activation_digest", "$2a$10$1W.rzSRgUtnbnTcafFHEH.sv9AGzDgAbNXhqv.C82X9/twvsbDI4m"], ["role", "mentee"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-3@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lavon Witting"], ["email", "stewart.dulaney-3@gmail.com"], ["age", 3], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "India"], ["goals", "I hope to buy a big house."], ["created_at", "2020-02-18 19:49:33.932788"], ["updated_at", "2020-02-18 19:49:33.932788"], ["password_digest", "password"], ["language", "Hindi,English,Tamil"], ["bio", "I like eating Indian food and watching Bollywood movies. I spent three years learning how to dance."], ["activation_digest", "$2a$10$qgxLHPvhB.ZmFRVZ4w2Ko.HpIPIzVByjAExZkF1jH18FFDB9S83b6"], ["role", "mentee"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-4@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jasper Reilly"], ["email", "stewart.dulaney-4@gmail.com"], ["age", 4], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Turkey"], ["goals", "Get my dream car."], ["created_at", "2020-02-18 19:49:33.980091"], ["updated_at", "2020-02-18 19:49:33.980091"], ["password_digest", "password"], ["language", "Turkish,English"], ["bio", "I play the guitar and enjoy discovering new musicians online. I also like computers."], ["activation_digest", "$2a$10$yVHhrNHJ4Mv7phFUGEuZp.Xj1oYSZbzWghDEDErukXqvfrpz1sG2q"], ["role", "mentee"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-5@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ernest Harber"], ["email", "stewart.dulaney-5@gmail.com"], ["age", 5], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "China"], ["goals", "I hope I can star in a movie someday."], ["created_at", "2020-02-18 19:49:34.028565"], ["updated_at", "2020-02-18 19:49:34.028565"], ["password_digest", "password"], ["language", "Mandarin,Cantonese,English"], ["bio", "I have lived in China my entire life. I like to read books in my free time."], ["activation_digest", "$2a$10$0Afr6y0Y2MOs60QX8FS0FO/pvtCR1y3k3wCtvIF1Wq8vs4Kw2m1.y"], ["role", "mentee"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-6@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Eudora Johnston"], ["email", "stewart.dulaney-6@gmail.com"], ["age", 6], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Iraq"], ["goals", "Some day, I hope to be an astronaut and fly to the moon in a SpaceX rocket."], ["created_at", "2020-02-18 19:49:34.083641"], ["updated_at", "2020-02-18 19:49:34.083641"], ["password_digest", "password"], ["language", "English,Arabic"], ["bio", "I enjoy reading astrophysics books and watching astrophysics videos online."], ["activation_digest", "$2a$10$j1E1bZETu3hLI3xy.Zj5Muirit7X0W5MFo4qV3Mn0nuvGJ4KT9eJa"], ["role", "mentee"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "stewart.dulaney-1@gmail.com"], ["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-1@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-1@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Humberto Boyer II"], ["email", "stewart.dulaney-1@gmail.com"], ["age", 1], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Italy"], ["goals", "I want to start my own company."], ["created_at", "2020-02-18 20:02:20.213422"], ["updated_at", "2020-02-18 20:02:20.213422"], ["password_digest", "$2a$10$Dh/4UxN7TCJM0vY03XtVneIR50WjsxinJH/LgfDT72svgSnVeTQ.2"], ["language", "English,Spanish,Italian,German"], ["bio", "My family is very important to me, and I grew up living with three sisters and a brother."], ["activation_digest", "$2a$10$F2lOb.FtfLFTPiq34AqGI.MraViqQh0Q/PLiRX8oBKTLE1Hb.eT6e"], ["role", "mentee"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-2@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mrs. Hans Prohaska"], ["email", "stewart.dulaney-2@gmail.com"], ["age", 2], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Iraq"], ["goals", "Set aside money for my children's education."], ["created_at", "2020-02-18 20:02:20.312218"], ["updated_at", "2020-02-18 20:02:20.312218"], ["password_digest", "$2a$10$e/Wxj84zUsYmwByQAgEQyu5IVeWlaRYooLAyyDAwXAMQgzViLsLv."], ["language", "Arabic"], ["bio", "I am 20 year old interested in technology, IT and computer science."], ["activation_digest", "$2a$10$tiTmflfgNl/j59mB2NWtoOcEE7YqfXWvSZlUgFgwiM0tgyM8j0VFG"], ["role", "mentee"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-3@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Emerson Padberg Sr."], ["email", "stewart.dulaney-3@gmail.com"], ["age", 3], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "India"], ["goals", "I hope to buy a big house."], ["created_at", "2020-02-18 20:02:20.403547"], ["updated_at", "2020-02-18 20:02:20.403547"], ["password_digest", "$2a$10$Ad0KZiR7kR6960IRmuPDVO7o8ln8ctUbXWUWukLNoFjL07RLx6SGy"], ["language", "Hindi,English,Tamil"], ["bio", "I like eating Indian food and watching Bollywood movies. I spent three years learning how to dance."], ["activation_digest", "$2a$10$87ghdwmTqGwuTRcVs3wFEuC4ALvltXSOBM70d49TRXsp8WpwtM3.a"], ["role", "mentee"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-4@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jarvis Huels"], ["email", "stewart.dulaney-4@gmail.com"], ["age", 4], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Turkey"], ["goals", "Get my dream car."], ["created_at", "2020-02-18 20:02:20.493572"], ["updated_at", "2020-02-18 20:02:20.493572"], ["password_digest", "$2a$10$1urRY/1UAcP5jkI4v58TPes6jNX/OBt1KdviBHcCapFG38YIs7rB2"], ["language", "Turkish,English"], ["bio", "I play the guitar and enjoy discovering new musicians online. I also like computers."], ["activation_digest", "$2a$10$uUHgcL8LEpTAArHgBbRhm.xUd2MjCh31cWtDTr0yn7AkJJyGYF6ay"], ["role", "mentee"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-5@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kayden Larkin"], ["email", "stewart.dulaney-5@gmail.com"], ["age", 5], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "China"], ["goals", "I hope I can star in a movie someday."], ["created_at", "2020-02-18 20:02:20.583470"], ["updated_at", "2020-02-18 20:02:20.583470"], ["password_digest", "$2a$10$rH9m2qqal83bFx6oWwn4xuUpPMBFomBiAPGJiEMkmxnjQiyzNEK9i"], ["language", "Mandarin,Cantonese,English"], ["bio", "I have lived in China my entire life. I like to read books in my free time."], ["activation_digest", "$2a$10$IN0TqElrO6Ja6OB7JrNwd.KlpMSE4zZ/kjSlzJhKiCkiUu4zSBXFq"], ["role", "mentee"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-6@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Elda Weimann"], ["email", "stewart.dulaney-6@gmail.com"], ["age", 6], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Iraq"], ["goals", "Some day, I hope to be an astronaut and fly to the moon in a SpaceX rocket."], ["created_at", "2020-02-18 20:02:20.676225"], ["updated_at", "2020-02-18 20:02:20.676225"], ["password_digest", "$2a$10$kK2mx.q1aI2UvksD8fi.GeJvlFF1gNHfOIqzTC5X0GlxQlIw26Zfa"], ["language", "English,Arabic"], ["bio", "I enjoy reading astrophysics books and watching astrophysics videos online."], ["activation_digest", "$2a$10$0y3vO/YXAH.X.WJY8UPq7uXBXCNRuChBW2aXDQNI5LTWNdVvluOo."], ["role", "mentee"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2020-02-18 12:02:37 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+Completed 200 OK in 974ms (Views: 967.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 12:02:40 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (361.9ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 406ms (Views: 401.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-18 12:02:49 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"evxRNYfuNz64eKeAN8ECPSQJNIYttUpSgvTAsddrkZhjBt8EZnge0jM4oA3ysHAzLdzWjs7WPOSr8hhyrXBC/w==", "session"=>{"email"=>"stewart.dulaney-1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "stewart.dulaney-1@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 98ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 12:02:49 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-1@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Elnora McClure"], ["email", "stewart.dulaney-1@gmail.com"], ["age", 1], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Italy"], ["goals", "I want to start my own company."], ["created_at", "2020-02-18 20:04:28.195098"], ["updated_at", "2020-02-18 20:04:28.195098"], ["password_digest", "$2a$10$xo/Uh6HTnSDxRuXkVJH4L.FYKUHl20ra5kR1LjbshBlpE6YhLVQH6"], ["language", "English,Spanish,Italian,German"], ["bio", "My family is very important to me, and I grew up living with three sisters and a brother."], ["activation_digest", "$2a$10$veKTrm/nVpqWkQSrEH0Cm.UJAyEf89AY2o.AnYPmiq5dG5sKEjCd."], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-2@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cristobal Langworth"], ["email", "stewart.dulaney-2@gmail.com"], ["age", 2], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Iraq"], ["goals", "Set aside money for my children's education."], ["created_at", "2020-02-18 20:04:28.289373"], ["updated_at", "2020-02-18 20:04:28.289373"], ["password_digest", "$2a$10$VOq0opOVRuwTXd1REKkiNOcAK7HcTkDZqR5p9VCpk0KMD008jNULK"], ["language", "Arabic"], ["bio", "I am 20 year old interested in technology, IT and computer science."], ["activation_digest", "$2a$10$TQaM9CGuFLF3pq2B0hV6GO5L8pp3PgJvZsYAo6htBdQ0nMpBdoJO6"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-3@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daija Cormier"], ["email", "stewart.dulaney-3@gmail.com"], ["age", 3], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "India"], ["goals", "I hope to buy a big house."], ["created_at", "2020-02-18 20:04:28.383772"], ["updated_at", "2020-02-18 20:04:28.383772"], ["password_digest", "$2a$10$sY9B134xytUaAziQ1u/xOeT7FZcPFT71wJHAqEZxS.v/9mMNV3sh."], ["language", "Hindi,English,Tamil"], ["bio", "I like eating Indian food and watching Bollywood movies. I spent three years learning how to dance."], ["activation_digest", "$2a$10$wqIHuzHFVFWYKzi8zDMdsO3HOXvEOKXO98Vua9v1LmZlJ3EorB45S"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-4@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dr. Donavon Auer"], ["email", "stewart.dulaney-4@gmail.com"], ["age", 4], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Turkey"], ["goals", "Get my dream car."], ["created_at", "2020-02-18 20:04:28.476478"], ["updated_at", "2020-02-18 20:04:28.476478"], ["password_digest", "$2a$10$W.CXHdhIsi6kppAIoDHs6e/.R7YcbCIKRquCk6aAFPVGOTVIa6DjS"], ["language", "Turkish,English"], ["bio", "I play the guitar and enjoy discovering new musicians online. I also like computers."], ["activation_digest", "$2a$10$gA3uthNLF5mpuKhQDmHjlO72VAwtWPiNntYQkKtBgSco.uQBKQFPO"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-5@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Michel Barrows"], ["email", "stewart.dulaney-5@gmail.com"], ["age", 5], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "China"], ["goals", "I hope I can star in a movie someday."], ["created_at", "2020-02-18 20:04:28.571136"], ["updated_at", "2020-02-18 20:04:28.571136"], ["password_digest", "$2a$10$fa2BB6aAbbDp9vHp9fGqQ.5SQPXkHTYCQP4l0B445fAtz5P6OjaIK"], ["language", "Mandarin,Cantonese,English"], ["bio", "I have lived in China my entire life. I like to read books in my free time."], ["activation_digest", "$2a$10$PsIhlmAFyUX784dzlIGKi.EUZSg1ASkk7sLEPYX/ZCjMVtYOTj10."], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-6@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Delpha Davis DVM"], ["email", "stewart.dulaney-6@gmail.com"], ["age", 6], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Iraq"], ["goals", "Some day, I hope to be an astronaut and fly to the moon in a SpaceX rocket."], ["created_at", "2020-02-18 20:04:28.664150"], ["updated_at", "2020-02-18 20:04:28.664150"], ["password_digest", "$2a$10$V18t14x9JVMsrLOcUepyP.t7k4WP5wNfoma7SVC3Gy8s/q6AeN4MS"], ["language", "English,Arabic"], ["bio", "I enjoy reading astrophysics books and watching astrophysics videos online."], ["activation_digest", "$2a$10$IEcSp6Fl3F9CqGK5n/GLruTRueBpFYwt0/ue3qyAnfGpOPpmgryfm"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2020-02-18 12:04:37 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 1051ms (Views: 1045.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 12:04:39 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (277.7ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 318ms (Views: 313.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-18 12:04:47 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W9rIk2AZZ4XnL0yVoggrMQFwDSA2aEi5mon2Hap2lsJCIEaigY9OaWxvSxhneVk/CKXvKNULPg+zjy7e0G1FpQ==", "session"=>{"email"=>"stewart.dulaney-1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "stewart.dulaney-1@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/15
+Completed 302 Found in 112ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/users/15" for ::1 at 2020-02-18 12:04:47 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 74ms (Views: 70.4ms | ActiveRecord: 0.3ms)
+=======
 Started GET "/users/7" for ::1 at 2020-02-18 11:09:05 -0800
 Processing by UsersController#show as HTML
   Parameters: {"id"=>"7"}
@@ -20103,6 +20471,7 @@ Processing by StaticPagesController#home as HTML
   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   Rendered layouts/_header.html.erb (2.9ms)
 Completed 200 OK in 86ms (Views: 84.5ms | ActiveRecord: 0.1ms)
+>>>>>>> 825ec76f090e3b6d75ea46419746893bba260ae3
 
 
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -20183,3 +20552,258 @@ Completed 200 OK in 86ms (Views: 84.5ms | ActiveRecord: 0.1ms)
   [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2020-02-18 20:07:04.135250"], ["key", "environment"]]
   [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "matches"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "matches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mentor_id" integer, "mentee_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "microposts"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "age" integer, "zipcode" integer, "phone" varchar, "country" varchar, "goals" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "language" varchar, "bio" text, "remember_digest" varchar, "activation_digest" varchar, "activated" boolean DEFAULT 'f', "activated_at" datetime, "reset_digest" varchar, "reset_sent_at" datetime, "role" varchar)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200218100401)[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200213195414),
+(20200206193629),
+(20200209060154),
+(20200206193024),
+(20200210020058),
+(20200130193951),
+(20200218100235),
+(20200130193516),
+(20200215031424),
+(20200213230438),
+(20200130185607),
+(20200213193422);
+
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-18 20:14:31.428428"], ["updated_at", "2020-02-18 20:14:31.428428"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "matches"[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "matches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mentor_id" integer, "mentee_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "microposts"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "age" integer, "zipcode" integer, "phone" varchar, "country" varchar, "goals" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "language" varchar, "bio" text, "remember_digest" varchar, "activation_digest" varchar, "activated" boolean DEFAULT 'f', "activated_at" datetime, "reset_digest" varchar, "reset_sent_at" datetime, "role" varchar)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200218100401)[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200213195414),
+(20200206193629),
+(20200209060154),
+(20200206193024),
+(20200210020058),
+(20200130193951),
+(20200218100235),
+(20200130193516),
+(20200215031424),
+(20200213230438),
+(20200130185607),
+(20200213193422);
+
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-18 20:14:31.471134"], ["updated_at", "2020-02-18 20:14:31.471134"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2020-02-18 20:14:31.478180"], ["key", "environment"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-1@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alphonso Tromp"], ["email", "stewart.dulaney-1@gmail.com"], ["age", 1], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Italy"], ["goals", "I want to start my own company."], ["created_at", "2020-02-18 20:14:32.193559"], ["updated_at", "2020-02-18 20:14:32.193559"], ["password_digest", "$2a$10$UpIRZy8KwSeEd.SoWXmSauT3ujkoI.ImLP/H/WmHnNGLUMRsrizN6"], ["language", "English,Spanish,Italian,German"], ["bio", "My family is very important to me, and I grew up living with three sisters and a brother."], ["activation_digest", "$2a$10$ptBPyQiMTQgCIXmJZ8qdAORiNb2dvOuWsIx.R1LxujR6UGjTvpTgi"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-2@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Emilio Stiedemann"], ["email", "stewart.dulaney-2@gmail.com"], ["age", 2], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Iraq"], ["goals", "Set aside money for my children's education."], ["created_at", "2020-02-18 20:14:32.305428"], ["updated_at", "2020-02-18 20:14:32.305428"], ["password_digest", "$2a$10$tV4PFineJHZKlHBi91EI.eMcGv/aJWElIe7rC5EwIrbbfCp63i.5e"], ["language", "Arabic"], ["bio", "I am 20 year old interested in technology, IT and computer science."], ["activation_digest", "$2a$10$3w0MCLrWywshYI1BsIpfjeM3ZO733Zrgcnx1HczdMfwC4ZHcr49H."], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-3@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gwen Buckridge MD"], ["email", "stewart.dulaney-3@gmail.com"], ["age", 3], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "India"], ["goals", "I hope to buy a big house."], ["created_at", "2020-02-18 20:14:32.475688"], ["updated_at", "2020-02-18 20:14:32.475688"], ["password_digest", "$2a$10$QytKTmwrzzNIiBRBUoBNluNX3OHTJSlOz9dPVwDoQW7sEZsM/YR9m"], ["language", "Hindi,English,Tamil"], ["bio", "I like eating Indian food and watching Bollywood movies. I spent three years learning how to dance."], ["activation_digest", "$2a$10$5KtHnz6XFI6I7Se4Df64g.gnlkM20LxAsAHnts/dnAwJ4UqnuNraC"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-4@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Leatha Hartmann MD"], ["email", "stewart.dulaney-4@gmail.com"], ["age", 4], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Turkey"], ["goals", "Get my dream car."], ["created_at", "2020-02-18 20:14:32.626023"], ["updated_at", "2020-02-18 20:14:32.626023"], ["password_digest", "$2a$10$ybS6rUiK3SPUyZljHs0UA.iTwgaQyRRwAUsbOjWT/R9Lld9pNK5zy"], ["language", "Turkish,English"], ["bio", "I play the guitar and enjoy discovering new musicians online. I also like computers."], ["activation_digest", "$2a$10$CRNx1KmrkIh3z91ye/LMluLwidRY9P7JdW8yv9FU/yxMtdexFspHS"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-5@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cesar Hills"], ["email", "stewart.dulaney-5@gmail.com"], ["age", 5], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "China"], ["goals", "I hope I can star in a movie someday."], ["created_at", "2020-02-18 20:14:32.740401"], ["updated_at", "2020-02-18 20:14:32.740401"], ["password_digest", "$2a$10$WC.Z2uNJ72bkf0yN3DPkQuXsb9HiguXcAEd3W5YL3DQSCzHQCVN1O"], ["language", "Mandarin,Cantonese,English"], ["bio", "I have lived in China my entire life. I like to read books in my free time."], ["activation_digest", "$2a$10$JvdjC1QLeNLg4emp2NiVcuv7J/.az1SrkOkXy1c0f6/KoWK5K797y"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-6@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (5.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fae Gusikowski"], ["email", "stewart.dulaney-6@gmail.com"], ["age", 6], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Iraq"], ["goals", "Some day, I hope to be an astronaut and fly to the moon in a SpaceX rocket."], ["created_at", "2020-02-18 20:14:32.878632"], ["updated_at", "2020-02-18 20:14:32.878632"], ["password_digest", "$2a$10$xEP6UM0HEO0iymx5RJqjduX7Xc0XtQVWTvEPGE4w16Gnm1PtFc.hS"], ["language", "English,Arabic"], ["bio", "I enjoy reading astrophysics books and watching astrophysics videos online."], ["activation_digest", "$2a$10$Nj0vJpI15QPLpk0xmP1y5u2y/guSXIj/2r1nnIEqaFY8hIoRNpc8m"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-1@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "matches"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "matches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mentor_id" integer, "mentee_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "microposts"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "age" integer, "zipcode" integer, "phone" varchar, "country" varchar, "goals" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "language" varchar, "bio" text, "remember_digest" varchar, "activation_digest" varchar, "activated" boolean DEFAULT 'f', "activated_at" datetime, "reset_digest" varchar, "reset_sent_at" datetime, "role" varchar)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200218100401)[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200213195414),
+(20200206193629),
+(20200209060154),
+(20200206193024),
+(20200210020058),
+(20200130193951),
+(20200218100235),
+(20200130193516),
+(20200215031424),
+(20200213230438),
+(20200130185607),
+(20200213193422);
+
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-18 20:15:09.114992"], ["updated_at", "2020-02-18 20:15:09.114992"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "matches"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "matches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mentor_id" integer, "mentee_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "microposts"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "age" integer, "zipcode" integer, "phone" varchar, "country" varchar, "goals" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "language" varchar, "bio" text, "remember_digest" varchar, "activation_digest" varchar, "activated" boolean DEFAULT 'f', "activated_at" datetime, "reset_digest" varchar, "reset_sent_at" datetime, "role" varchar)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200218100401)[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200213195414),
+(20200206193629),
+(20200209060154),
+(20200206193024),
+(20200210020058),
+(20200130193951),
+(20200218100235),
+(20200130193516),
+(20200215031424),
+(20200213230438),
+(20200130185607),
+(20200213193422);
+
+[0m
+  [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-18 20:15:09.162315"], ["updated_at", "2020-02-18 20:15:09.162315"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2020-02-18 20:15:09.165289"], ["key", "environment"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-1@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mrs. Angel Morissette"], ["email", "stewart.dulaney-1@gmail.com"], ["age", 1], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Italy"], ["goals", "I want to start my own company."], ["created_at", "2020-02-18 20:15:09.781846"], ["updated_at", "2020-02-18 20:15:09.781846"], ["password_digest", "$2a$10$EuXOcBbhxyz4ZWt1ORzbL.9x8KNLxmtN4d3EdEV1W79HgEXFfKIiW"], ["language", "English,Spanish,Italian,German"], ["bio", "My family is very important to me, and I grew up living with three sisters and a brother."], ["activation_digest", "$2a$10$n0L2DSGSjvW0C2tZJqjLkOuXtZoBEwFL1wrLba7v5NIAOHBfM/IJ2"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-2@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Stephan Goodwin"], ["email", "stewart.dulaney-2@gmail.com"], ["age", 2], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Iraq"], ["goals", "Set aside money for my children's education."], ["created_at", "2020-02-18 20:15:09.898088"], ["updated_at", "2020-02-18 20:15:09.898088"], ["password_digest", "$2a$10$2GDULYexEE5HSJPNJtb/u.DXk73/6JDmJRdh1.vsFoMJfSj7d2NPS"], ["language", "Arabic"], ["bio", "I am 20 year old interested in technology, IT and computer science."], ["activation_digest", "$2a$10$wND8j0UwQqrcSu96Za34Z.grQ45YzbOGEpjweB/MH3DkeHJ91M44K"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-3@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Christian Leffler PhD"], ["email", "stewart.dulaney-3@gmail.com"], ["age", 3], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "India"], ["goals", "I hope to buy a big house."], ["created_at", "2020-02-18 20:15:10.026694"], ["updated_at", "2020-02-18 20:15:10.026694"], ["password_digest", "$2a$10$dnbsVVNrw.qnvzAyrrtgXO6c0enWgADbrPoUOUwmzxd4EHDw.EhJm"], ["language", "Hindi,English,Tamil"], ["bio", "I like eating Indian food and watching Bollywood movies. I spent three years learning how to dance."], ["activation_digest", "$2a$10$DaYETw9YxBLQh3xoE5ctZeYzxhUkbKkrUqI9CJkJAB6NqsTHSzu.O"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-4@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miss Ned Sipes"], ["email", "stewart.dulaney-4@gmail.com"], ["age", 4], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Turkey"], ["goals", "Get my dream car."], ["created_at", "2020-02-18 20:15:10.154360"], ["updated_at", "2020-02-18 20:15:10.154360"], ["password_digest", "$2a$10$JFZUScSfAnr9v458mMo8KOx7gfRzffMbbaD16l2PoYw//YJAM6Az2"], ["language", "Turkish,English"], ["bio", "I play the guitar and enjoy discovering new musicians online. I also like computers."], ["activation_digest", "$2a$10$U1LRMIpo/1TaVl6K7wHY1uGWJlf1lPKe4RwHpA7CvoTc14y2W9W.S"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-5@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Yvonne Treutel"], ["email", "stewart.dulaney-5@gmail.com"], ["age", 5], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "China"], ["goals", "I hope I can star in a movie someday."], ["created_at", "2020-02-18 20:15:10.271619"], ["updated_at", "2020-02-18 20:15:10.271619"], ["password_digest", "$2a$10$hRQGVg2f0iiHaHXoDlxOM.UeepIhIO4ibtMzH1/l/UfBCMCqRLyjK"], ["language", "Mandarin,Cantonese,English"], ["bio", "I have lived in China my entire life. I like to read books in my free time."], ["activation_digest", "$2a$10$AaEJtWpkF7GdDNnhfQEQyOjl6yy9Dsw3qfpugFrRfkq8hOnCrOdne"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-6@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rowan Bartell"], ["email", "stewart.dulaney-6@gmail.com"], ["age", 6], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Iraq"], ["goals", "Some day, I hope to be an astronaut and fly to the moon in a SpaceX rocket."], ["created_at", "2020-02-18 20:15:10.385328"], ["updated_at", "2020-02-18 20:15:10.385328"], ["password_digest", "$2a$10$xR1ZdZXrJRVDENllLklJ4OlWbyORa/6Od3VD9rvT2VwOo.C9dWZDq"], ["language", "English,Arabic"], ["bio", "I enjoy reading astrophysics books and watching astrophysics videos online."], ["activation_digest", "$2a$10$/UCPiI0jvXzpisZvBdhnLeXx6D89EbONHRt8FvyoD0MEhPAQHVGbq"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-1@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mrs. Andy O'Keefe"], ["email", "stewart.dulaney-1@gmail.com"], ["age", 1], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Italy"], ["goals", "I want to start my own company."], ["created_at", "2020-02-18 20:16:11.175902"], ["updated_at", "2020-02-18 20:16:11.175902"], ["password_digest", "$2a$10$pp6eDX4H71QUqgKihcZx7OT8HngYTEl4wCpx6rmHyQTI7emNR2Vw2"], ["language", "English,Spanish,Italian,German"], ["bio", "My family is very important to me, and I grew up living with three sisters and a brother."], ["activation_digest", "$2a$10$n21pPBqRp9y/1WaOamH65emV6.q6BEzVyDjSOaWFTbVbEObZ1Dd76"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-2@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bridgette Stroman"], ["email", "stewart.dulaney-2@gmail.com"], ["age", 2], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Iraq"], ["goals", "Set aside money for my children's education."], ["created_at", "2020-02-18 20:16:11.326539"], ["updated_at", "2020-02-18 20:16:11.326539"], ["password_digest", "$2a$10$zNz7iBUDuXJj6XOOaLj8b.5MTsZnVcUsa2TqeA/howRXdwKRGbKmK"], ["language", "Arabic"], ["bio", "I am 20 year old interested in technology, IT and computer science."], ["activation_digest", "$2a$10$NVZ1H54xpXbV58v7.Nw/Reg2oIjQ4yTn3M13.5//Y2H7PNkL0emra"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-3@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miss Ayana Grant"], ["email", "stewart.dulaney-3@gmail.com"], ["age", 3], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "India"], ["goals", "I hope to buy a big house."], ["created_at", "2020-02-18 20:16:11.469159"], ["updated_at", "2020-02-18 20:16:11.469159"], ["password_digest", "$2a$10$w/ctTZm38fOjmCd0O/0FM.QfXIpInkGy/aoU6VUhiC9tp2s2eQ0XS"], ["language", "Hindi,English,Tamil"], ["bio", "I like eating Indian food and watching Bollywood movies. I spent three years learning how to dance."], ["activation_digest", "$2a$10$hw5orfCU0sQD.kvxz.ECHeKzMWb9Nk.nu8XFwTj6.bOKmz5VapcD2"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-4@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Wendell Ullrich DDS"], ["email", "stewart.dulaney-4@gmail.com"], ["age", 4], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Turkey"], ["goals", "Get my dream car."], ["created_at", "2020-02-18 20:16:11.587056"], ["updated_at", "2020-02-18 20:16:11.587056"], ["password_digest", "$2a$10$NuJlbd12QHH25fQeFhGzseAql5N4v90hvJsDnkAPRKLUSDie52zca"], ["language", "Turkish,English"], ["bio", "I play the guitar and enjoy discovering new musicians online. I also like computers."], ["activation_digest", "$2a$10$yoRHyLVfBxDO2mjOKK6ZCuVHq12uVc4RLGoKvQshpTPfPOKZfDgCa"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-5@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dr. Mazie Carter"], ["email", "stewart.dulaney-5@gmail.com"], ["age", 5], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "China"], ["goals", "I hope I can star in a movie someday."], ["created_at", "2020-02-18 20:16:11.707101"], ["updated_at", "2020-02-18 20:16:11.707101"], ["password_digest", "$2a$10$0hwG2KYFVLiM2d4uSdaAbucOK6/Us0NBQ5djp/1qN6soYRb416k8i"], ["language", "Mandarin,Cantonese,English"], ["bio", "I have lived in China my entire life. I like to read books in my free time."], ["activation_digest", "$2a$10$U4qjLbL.1uY6StMvOfJCGu/9FnYoTx0gqZ3pq7LEszjfVW1oxXIQm"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-6@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jamey Schowalter"], ["email", "stewart.dulaney-6@gmail.com"], ["age", 6], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Iraq"], ["goals", "Some day, I hope to be an astronaut and fly to the moon in a SpaceX rocket."], ["created_at", "2020-02-18 20:16:11.848335"], ["updated_at", "2020-02-18 20:16:11.848335"], ["password_digest", "$2a$10$JjPhwniflvSUbiiWoGwY7ePBxnK3QBO6xJaKZdi44eCBM6CCLjFNi"], ["language", "English,Arabic"], ["bio", "I enjoy reading astrophysics books and watching astrophysics videos online."], ["activation_digest", "$2a$10$ApEjXXiGoXKlvuF8mYjSPOyKISSeOlr78o7a8mWaENOZ0JOFzTABK"], ["activated", "t"], ["role", "mentee"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
