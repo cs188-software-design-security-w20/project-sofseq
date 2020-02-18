@@ -18017,3 +18017,2091 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/login" for ::1 at 2020-02-18 10:55:07 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (37.0ms)
+Started GET "/signup" for ::1 at 2020-02-18 10:55:09 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (56.1ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 6342ms (Views: 6250.4ms | ActiveRecord: 1.7ms)
+
+
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 8161ms (Views: 8148.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 10:55:23 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-18 10:55:26 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 63ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-18 11:07:49 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 49ms (Views: 32.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 11:07:51 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-18 11:07:55 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qXI+7sKGUj4P7aV1mysnpLKsI5ym7SJFSP7MnUDKHUeZPMdXoa+GWERzANz7x64OvSEBxKRUaRY9OEBepbnzkg==", "session"=>{"email"=>"ben@ben.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ben@ben.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 63ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:07:55 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 11:07:58 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 38ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "ben@ben.com"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "activated" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2020-02-18 19:08:52.596266"], ["activated", "t"], ["id", 1]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/login" for ::1 at 2020-02-18 11:09:00 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N3oQJwzotlSsHgpSA4eSkm86ASlA79mpvITX8+N3wrgHNOmeb8FiMueAr/tjaxs4YLcjcUJWkvrJQlswBgQsbQ==", "session"=>{"email"=>"ben@ben.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ben@ben.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 100ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for ::1 at 2020-02-18 11:09:00 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 31ms (Views: 26.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/" for ::1 at 2020-02-18 11:09:04 -0800
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/7" for ::1 at 2020-02-18 11:09:05 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:09:05 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:09:05 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches" for ::1 at 2020-02-18 11:09:06 -0800
+  
+SyntaxError (/Users/hotan/Desktop/188_secure_software/refume/app/controllers/matches_controller.rb:87: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/matches_controller.rb:87: syntax error, unexpected end-of-input, expecting end
+Started GET "/matches" for ::1 at 2020-02-18 11:10:01 -0800
+  
+SyntaxError (/Users/hotan/Desktop/188_secure_software/refume/app/controllers/matches_controller.rb:87: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/matches_controller.rb:87: syntax error, unexpected end-of-input, expecting end
+Started GET "/matches" for ::1 at 2020-02-18 11:10:32 -0800
+  
+SyntaxError (/Users/hotan/Desktop/188_secure_software/refume/app/controllers/matches_controller.rb:86: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/matches_controller.rb:86: syntax error, unexpected end-of-input, expecting end
+Started GET "/matches" for ::1 at 2020-02-18 11:11:53 -0800
+  
+SyntaxError (/Users/hotan/Desktop/188_secure_software/refume/app/controllers/matches_controller.rb:86: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/matches_controller.rb:86: syntax error, unexpected end-of-input, expecting end
+Started GET "/matches" for ::1 at 2020-02-18 11:12:35 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <% provide(:title, "Match result") %>
+    2: <div class="row" style="text-align:center;">
+    3:   <div class="col-md-6 col-md-offset-3">
+    4:     <%= render @matches %>
+    5:   </div>
+    6: </div>
+    7: 
+  
+app/views/matches/index.html.erb:4:in `_app_views_matches_index_html_erb___1489522663658668628_70098318226360'
+Started GET "/matches" for ::1 at 2020-02-18 11:13:35 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <% provide(:title, "Match result") %>
+    2: <div class="row" style="text-align:center;">
+    3:   <div class="col-md-6 col-md-offset-3">
+    4:     <%= render @matches %>
+    5:   </div>
+    6: </div>
+    7: 
+  
+app/views/matches/index.html.erb:4:in `_app_views_matches_index_html_erb___1489522663658668628_70098311122760'
+Started GET "/matches/" for ::1 at 2020-02-18 11:13:56 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <% provide(:title, "Match result") %>
+    2: <div class="row" style="text-align:center;">
+    3:   <div class="col-md-6 col-md-offset-3">
+    4:     <%= render @matches %>
+    5:   </div>
+    6: </div>
+    7: 
+  
+app/views/matches/index.html.erb:4:in `_app_views_matches_index_html_erb___1489522663658668628_70098319155680'
+Started GET "/matches/show" for ::1 at 2020-02-18 11:13:56 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Match with 'id'=show):
+  
+app/controllers/matches_controller.rb:80:in `set_match'
+Started GET "/matches/show" for ::1 at 2020-02-18 11:14:58 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Match with 'id'=show):
+  
+app/controllers/matches_controller.rb:80:in `set_match'
+Started GET "/matches/show" for ::1 at 2020-02-18 11:14:59 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Match with 'id'=show):
+  
+app/controllers/matches_controller.rb:80:in `set_match'
+Started GET "/matches/show" for ::1 at 2020-02-18 11:15:00 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Match with 'id'=show):
+  
+app/controllers/matches_controller.rb:80:in `set_match'
+Started GET "/matches/show" for ::1 at 2020-02-18 11:15:58 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Match with 'id'=show):
+  
+app/controllers/matches_controller.rb:80:in `set_match'
+Started GET "/matches/show" for ::1 at 2020-02-18 11:16:01 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Match with 'id'=show):
+  
+app/controllers/matches_controller.rb:80:in `set_match'
+Started GET "/matches/" for ::1 at 2020-02-18 11:16:02 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial matches/_1 with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/hotan/Desktop/188_secure_software/refume/app/views"
+):
+    1: <% provide(:title, "Match result") %>
+    2: <div class="row" style="text-align:center;">
+    3:   <div class="col-md-6 col-md-offset-3">
+    4:     <%= render "/matches/#{@user.id}" %>
+    5:   </div>
+    6: </div>
+    7: 
+  
+app/views/matches/index.html.erb:4:in `_app_views_matches_index_html_erb___1489522663658668628_70098302277240'
+Started GET "/matches/" for ::1 at 2020-02-18 11:16:02 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial matches/_1 with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/hotan/Desktop/188_secure_software/refume/app/views"
+):
+    1: <% provide(:title, "Match result") %>
+    2: <div class="row" style="text-align:center;">
+    3:   <div class="col-md-6 col-md-offset-3">
+    4:     <%= render "/matches/#{@user.id}" %>
+    5:   </div>
+    6: </div>
+    7: 
+  
+app/views/matches/index.html.erb:4:in `_app_views_matches_index_html_erb___1489522663658668628_70098306914080'
+Started GET "/matches/" for ::1 at 2020-02-18 11:17:33 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches/1" for ::1 at 2020-02-18 11:17:38 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Match with 'id'=1):
+  
+app/controllers/matches_controller.rb:80:in `set_match'
+Started GET "/matches/" for ::1 at 2020-02-18 11:17:56 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches" for ::1 at 2020-02-18 11:17:56 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 102ms (Views: 100.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches" for ::1 at 2020-02-18 11:18:35 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 55ms (Views: 35.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/matches" for ::1 at 2020-02-18 11:18:41 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 70ms (Views: 68.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/matches/1" for ::1 at 2020-02-18 11:18:46 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 11ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Match with 'id'=1):
+  
+app/controllers/matches_controller.rb:80:in `set_match'
+Started GET "/matches/1" for ::1 at 2020-02-18 11:19:13 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `type' for #<User:0x00007f820d5ae808>):
+  
+app/controllers/matches_controller.rb:20:in `show'
+Started GET "/matches/" for ::1 at 2020-02-18 11:19:37 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 159ms (Views: 139.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/matches" for ::1 at 2020-02-18 11:19:37 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 69ms (Views: 64.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches" for ::1 at 2020-02-18 11:19:37 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/matches/1" for ::1 at 2020-02-18 11:19:38 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of nil into String):
+    2: <p id="notice"><%= notice %></p>
+    3: 
+    4: <h2>Show Matches </h2>
+    5: <%= "This is a " + @user.name + ", who is a " + @user.role %>
+    6: 
+    7: <!-- < %= link_to 'Edit', edit_match_path(@match) %> | -->
+    8: <%= link_to 'Back', matches_path %>
+  
+app/views/matches/show.html.erb:5:in `+'
+app/views/matches/show.html.erb:5:in `_app_views_matches_show_html_erb__169610604280860259_70098333942860'
+Started GET "/matches/" for ::1 at 2020-02-18 11:21:37 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 70ms (Views: 68.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches" for ::1 at 2020-02-18 11:21:37 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches/1" for ::1 at 2020-02-18 11:21:38 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 47ms (Views: 45.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches/1" for ::1 at 2020-02-18 11:21:57 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (15.5ms)
+Completed 200 OK in 80ms (Views: 78.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches/1" for ::1 at 2020-02-18 11:22:09 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches/1" for ::1 at 2020-02-18 11:22:21 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/hotan/Desktop/188_secure_software/refume/app/views/matches/show.html.erb:19: unterminated string meets end of file
+          end
+              ^
+/Users/hotan/Desktop/188_secure_software/refume/app/views/matches/show.html.erb:19: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/matches/show.html.erb:19: unterminated string meets end of file
+app/views/matches/show.html.erb:19: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/matches/1" for ::1 at 2020-02-18 11:22:34 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (10.0ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/matches/" for ::1 at 2020-02-18 11:23:03 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 52ms (Views: 26.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/matches" for ::1 at 2020-02-18 11:23:04 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches/1" for ::1 at 2020-02-18 11:23:15 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches/1" for ::1 at 2020-02-18 11:24:19 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 44ms (Views: 27.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:24:21 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/help" for ::1 at 2020-02-18 11:24:21 -0800
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/info" for ::1 at 2020-02-18 11:24:23 -0800
+Processing by StaticPagesController#info as HTML
+  Rendering static_pages/info.html.erb within layouts/application
+  Rendered static_pages/info.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for ::1 at 2020-02-18 11:24:25 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 60ms (Views: 56.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/edit" for ::1 at 2020-02-18 11:24:27 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered users/edit.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 45ms (Views: 30.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for ::1 at 2020-02-18 11:24:30 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 61ms (Views: 46.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:25:56 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (25.5ms)
+Completed 200 OK in 60ms (Views: 59.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/help" for ::1 at 2020-02-18 11:25:57 -0800
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (27.9ms)
+Completed 200 OK in 79ms (Views: 76.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:25:58 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-18 11:26:22 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"P8DWVIVY6JTM/cPker/HCEbSesDeDpbOq1W+Nd/iT36VsuD0ATIsdEMPOUaVnyDQQjLjB9ukEv81oyA8W1cAHg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:26:22 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 11:26:23 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-18 11:26:25 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 69ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-02-18 11:26:43 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vPyFcj6gstXTO5M3F9015sDtT0mk8q+/IFtfLecDlZad+iXAtqcInizefMbSZVx3tBu0WOyDX/iG9D4FZa0IOw==", "user"=>{"name"=>"foo", "email"=>"foo@foo.com", "age"=>"11", "zipcode"=>"111", "country"=>"sdfsdf", "language"=>"sdfsf", "role"=>"Mentor", "goals"=>"sdfsdf", "bio"=>"sdfsdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+Unpermitted parameter: :role
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "foo@foo.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 99ms (Views: 29.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for ::1 at 2020-02-18 11:26:57 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eekrY3G1N4y4ZZrvzM+H9lQNWjKvHd2dUTDzWjP4io/Tmx3D9d/zbDeXYE0j72AuUO3D9aq3WazPxm1Tt03F7w==", "user"=>{"name"=>"bar", "email"=>"bar@bar.com", "age"=>"11", "zipcode"=>"111", "country"=>"sdfsdf", "language"=>"sdfsf", "role"=>"Mentor", "goals"=>"sdfsdf", "bio"=>"sdfsdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+Unpermitted parameter: :role
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "bar@bar.com"], ["LIMIT", 1]]
+  [1m[35mSQL (6.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "bar"], ["email", "bar@bar.com"], ["age", 11], ["zipcode", 111], ["country", "sdfsdf"], ["goals", "sdfsdf"], ["created_at", "2020-02-18 19:26:57.083296"], ["updated_at", "2020-02-18 19:26:57.083296"], ["password_digest", "$2a$10$roFuxu2Y73MYPZL1lJ2eauZajQox..dbhHQj7R9MM5g1eDzDz67D."], ["language", "sdfsf"], ["bio", "sdfsdf"], ["activation_digest", "$2a$10$V.IgXYx8zMMRJcmXtJoac.rdAeSCGIq58wtYmK/nNoZ3F36Zsv/Ya"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.4ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.6ms)
+UserMailer#account_activation: processed outbound mail in 206.2ms
+Sent mail to bar@bar.com (12.9ms)
+Date: Tue, 18 Feb 2020 11:26:57 -0800
+From: noreply@refume.com
+To: bar@bar.com
+Message-ID: <5e4c3a81917fd_17ce83fc1065b212c7783b@Howards-MacBook-Pro-2.local.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e4c3a818f7e4_17ce83fc1065b212c77746";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e4c3a818f7e4_17ce83fc1065b212c77746
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi bar,
+
+Welcome to RefuMe! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/K2XVXB_FBinQ-nOeT_TqhQ/edit?email=bar%40bar.com
+
+
+----==_mimepart_5e4c3a818f7e4_17ce83fc1065b212c77746
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>RefuMe</h1>
+
+<p>Hi bar,</p>
+
+<p>
+Welcome to RefuMe! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/K2XVXB_FBinQ-nOeT_TqhQ/edit?email=bar%40bar.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5e4c3a818f7e4_17ce83fc1065b212c77746--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 580ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:26:57 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "bar@bar.com"], ["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "activated" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2020-02-18 19:27:21.619410"], ["activated", "t"], ["id", 3]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2020-02-18 11:27:23 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 51ms (Views: 50.8ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 11:27:26 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 34ms (Views: 31.4ms)
+
+
+Started POST "/login" for ::1 at 2020-02-18 11:27:31 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/pVM3iw4ghqW3ylTK/aDa+JyYxqifH3wuzXGAW3TDCnO27VnTxFWfN1BjPpLGgrB7f9BQqDFNqPO80rCiKDi/A==", "session"=>{"email"=>"bar@bar.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bar@bar.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 72ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/3" for ::1 at 2020-02-18 11:27:31 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-18 11:28:48 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ecFvFw+Hybt5GTujNBD+V7GlxLdNyNI6ho1UcRtw897Ts1m3i+0NW/brwQHbMBmPtUVdcEhiVgsYe8p4n8W8vg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:28:48 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 11:28:49 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 63ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-18 11:28:50 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+Completed 200 OK in 87ms (Views: 84.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-02-18 11:29:13 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QPtOMvI9TiWcrMDSB5tb0vHW4pbucW6lVe5JS5Vd+rVh/e6Aejr0bmNJLyPCIzJDhSAZh6YAnuLzQShjF/NnGA==", "user"=>{"name"=>"Susan", "email"=>"susan@bar.com", "age"=>"11", "zipcode"=>"111", "country"=>"sdff", "language"=>"sdfsdf", "role"=>"Mentor", "goals"=>"sdfsdf", "bio"=>"sdfsdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "susan@bar.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Susan"], ["email", "susan@bar.com"], ["age", 11], ["zipcode", 111], ["country", "sdff"], ["goals", "sdfsdf"], ["created_at", "2020-02-18 19:29:13.922008"], ["updated_at", "2020-02-18 19:29:13.922008"], ["password_digest", "$2a$10$m4Q.8iGbRNEIVRUSzzf3f.3/PNq85FlS2a3eiLoieZfZtbqhVKSQO"], ["language", "sdfsdf"], ["bio", "sdfsdf"], ["activation_digest", "$2a$10$vo2voWGqpulqgSlpcKYjsOQQE0VoJlblsE.wvY9SZCAQlfY6GpdO2"], ["role", "Mentor"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.5ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.8ms)
+UserMailer#account_activation: processed outbound mail in 15.2ms
+Sent mail to susan@bar.com (4.2ms)
+Date: Tue, 18 Feb 2020 11:29:14 -0800
+From: noreply@refume.com
+To: susan@bar.com
+Message-ID: <5e4c3b0a1bbf_17ce83fc1065b2078780b9@Howards-MacBook-Pro-2.local.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e4c3b0ace1_17ce83fc1065b2078779bf";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e4c3b0ace1_17ce83fc1065b2078779bf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Susan,
+
+Welcome to RefuMe! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/SMDQcOmdE1PZl0lrqTXD6A/edit?email=susan%40bar.com
+
+
+----==_mimepart_5e4c3b0ace1_17ce83fc1065b2078779bf
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>RefuMe</h1>
+
+<p>Hi Susan,</p>
+
+<p>
+Welcome to RefuMe! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/SMDQcOmdE1PZl0lrqTXD6A/edit?email=susan%40bar.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5e4c3b0ace1_17ce83fc1065b2078779bf--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 148ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:29:14 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "susan@bar.com"], ["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "activated" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2020-02-18 19:29:34.952738"], ["activated", "t"], ["id", 4]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/login" for ::1 at 2020-02-18 11:29:44 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-18 11:29:52 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YKQobfCZScl6Uq/8GUYvaHcQ2BF7XsQwTx36X92W9NRQ6tHUk7CdrzHMClV5qqbCeJ36SXnnj2M623acOOUaAQ==", "session"=>{"email"=>"susan@bar.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "susan@bar.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 56ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:29:52 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2020-02-18 11:29:58 -0800
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/7" for ::1 at 2020-02-18 11:29:59 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:29:59 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (73.2ms)
+Completed 200 OK in 117ms (Views: 116.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:29:59 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (6.8ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/matches" for ::1 at 2020-02-18 11:30:00 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (74.4ms)
+Completed 200 OK in 122ms (Views: 99.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/matches" for ::1 at 2020-02-18 11:30:00 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/matches/4" for ::1 at 2020-02-18 11:30:01 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 45ms (Views: 36.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/matches" for ::1 at 2020-02-18 11:30:05 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 52ms (Views: 43.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/matches/4" for ::1 at 2020-02-18 11:30:06 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 49ms (Views: 30.9ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/matches" for ::1 at 2020-02-18 11:30:07 -0800
+Processing by MatchesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  Rendered matches/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 49ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/matches/4" for ::1 at 2020-02-18 11:30:11 -0800
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering matches/show.html.erb within layouts/application
+  Rendered matches/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 109ms (Views: 97.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:30:29 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/help" for ::1 at 2020-02-18 11:30:30 -0800
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/help" for ::1 at 2020-02-18 11:30:48 -0800
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/info" for ::1 at 2020-02-18 11:30:49 -0800
+Processing by StaticPagesController#info as HTML
+  Rendering static_pages/info.html.erb within layouts/application
+  Rendered static_pages/info.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:30:53 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.4ms)
+Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/help" for ::1 at 2020-02-18 11:30:54 -0800
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (16.1ms)
+Completed 200 OK in 72ms (Views: 71.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:30:56 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 34ms (Views: 29.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:31:21 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:32:37 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 80ms (Views: 77.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:32:54 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 117ms (Views: 114.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:33:04 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:33:09 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/" for ::1 at 2020-02-18 11:33:24 -0800
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2020-02-18 11:33:24 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:33:24 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for ::1 at 2020-02-18 11:33:24 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:33:24 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-18 11:33:29 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vHGRA7SE5f01vmFav/cRj1gdUvM38QZBrnutIxau2Z0WA6ejMO4hHbpMm/hQ1/ZXXP3LNDJbgnAwjTMqkhuW/Q=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:33:29 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 11:33:29 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-18 11:33:34 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3SsTjiGf6qKVg9jf2m0gBk7fR+EBclH/x3YiS/Wn/EftZeo3QrY+xN4dfXa6gamsQVJluQPLGqyysK6IENQSkg==", "session"=>{"email"=>"ben@ben.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ben@ben.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 56ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2020-02-18 11:33:34 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2020-02-18 11:34:00 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2020-02-18 11:34:08 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2020-02-18 11:34:30 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (4.1ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2020-02-18 11:34:34 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-18 11:34:41 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7M5xKQ7ZNACwLHzXAwKV9gaWwuK793oBL9hg+6qsbiBGvEeJirPw4D/ehnXsInIuAnZbJb5d/jCxLv7yLhkhQA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:34:41 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 11:34:42 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-18 11:34:47 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oJGUJfMTmp/TbdifpqLh7o2IlXm3SfXpm+v48077tZWQ322ckDpO+ZjzfTbGTmhEggW3IbXwvrruLXQwq4hbQA==", "session"=>{"email"=>"susan@bar.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "susan@bar.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 55ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:34:47 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:35:19 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:35:23 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:35:31 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:35:37 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:35:43 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 116ms (Views: 113.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:36:11 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:36:23 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/help" for ::1 at 2020-02-18 11:36:24 -0800
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/info" for ::1 at 2020-02-18 11:36:24 -0800
+Processing by StaticPagesController#info as HTML
+  Rendering static_pages/info.html.erb within layouts/application
+  Rendered static_pages/info.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:36:27 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 48ms (Views: 28.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2020-02-18 11:36:28 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/edit.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 43ms (Views: 36.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:36:46 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:38:26 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 35ms (Views: 30.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:53:48 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentor_id" = ?[0m  [["mentor_id", 4]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:31: else without rescue is useless
+'.freeze;   else 
+            ^~~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+...There is no match for this user yet. );@output_buffer.safe_a...
+...                           ^~~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:32: syntax error, unexpected ')'
+...s no match for this user yet. );@output_buffer.safe_append='
+...                              ^
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:33: syntax error, unexpected end, expecting ')'
+'.freeze;   end 
+            ^~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:37: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:39: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/users/show.html.erb:31: else without rescue is useless
+app/views/users/show.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/users/show.html.erb:32: syntax error, unexpected ')'
+app/views/users/show.html.erb:33: syntax error, unexpected end, expecting ')'
+app/views/users/show.html.erb:37: syntax error, unexpected ensure, expecting ')'
+app/views/users/show.html.erb:39: syntax error, unexpected end, expecting ')'
+Started GET "/users/4" for ::1 at 2020-02-18 11:54:06 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentor_id" = ?[0m  [["mentor_id", 4]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:25: syntax error, unexpected elsif, expecting end
+'.freeze;   elsif @user.role == "Mentee" 
+            ^~~~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:30: else without rescue is useless
+'.freeze;   else 
+            ^~~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+...There is no match for this user yet. );@output_buffer.safe_a...
+...                           ^~~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:31: syntax error, unexpected ')'
+...s no match for this user yet. );@output_buffer.safe_append='
+...                              ^
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:32: syntax error, unexpected end, expecting ')'
+'.freeze;   end 
+            ^~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:36: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:38: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/users/show.html.erb:25: syntax error, unexpected elsif, expecting end
+app/views/users/show.html.erb:30: else without rescue is useless
+app/views/users/show.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/users/show.html.erb:31: syntax error, unexpected ')'
+app/views/users/show.html.erb:32: syntax error, unexpected end, expecting ')'
+app/views/users/show.html.erb:36: syntax error, unexpected ensure, expecting ')'
+app/views/users/show.html.erb:38: syntax error, unexpected end, expecting ')'
+Started GET "/users/4" for ::1 at 2020-02-18 11:54:36 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentor_id" = ?[0m  [["mentor_id", 4]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:31: else without rescue is useless
+'.freeze;   else 
+            ^~~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+...There is no match for this user yet. );@output_buffer.safe_a...
+...                           ^~~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:32: syntax error, unexpected ')'
+...s no match for this user yet. );@output_buffer.safe_append='
+...                              ^
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:33: syntax error, unexpected end, expecting ')'
+'.freeze;   end 
+            ^~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:37: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:39: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/users/show.html.erb:31: else without rescue is useless
+app/views/users/show.html.erb:32: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/users/show.html.erb:32: syntax error, unexpected ')'
+app/views/users/show.html.erb:33: syntax error, unexpected end, expecting ')'
+app/views/users/show.html.erb:37: syntax error, unexpected ensure, expecting ')'
+app/views/users/show.html.erb:39: syntax error, unexpected end, expecting ')'
+Started GET "/users/4" for ::1 at 2020-02-18 11:54:54 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentor_id" = ?[0m  [["mentor_id", 4]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:33: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+...There is no match for this user yet. );@output_buffer.safe_a...
+...                           ^~~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:33: syntax error, unexpected ')'
+...s no match for this user yet. );@output_buffer.safe_append='
+...                              ^
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:34: syntax error, unexpected end, expecting ')'
+'.freeze;   end 
+            ^~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:38: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/hotan/Desktop/188_secure_software/refume/app/views/users/show.html.erb:40: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/users/show.html.erb:33: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+app/views/users/show.html.erb:33: syntax error, unexpected ')'
+app/views/users/show.html.erb:34: syntax error, unexpected end, expecting ')'
+app/views/users/show.html.erb:38: syntax error, unexpected ensure, expecting ')'
+app/views/users/show.html.erb:40: syntax error, unexpected end, expecting ')'
+Started GET "/users/4" for ::1 at 2020-02-18 11:55:10 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentor_id" = ?[0m  [["mentor_id", 4]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 94ms (Views: 91.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:55:39 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentor_id" = ?[0m  [["mentor_id", 4]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 51ms (Views: 48.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:55:57 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentor_id" = ?[0m  [["mentor_id", 4]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:56:02 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentor_id" = ?[0m  [["mentor_id", 4]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:56:11 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentor_id" = ?[0m  [["mentor_id", 4]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:56:25 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentor_id" = ?[0m  [["mentor_id", 4]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:56:32 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:56:33 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentor_id" = ?[0m  [["mentor_id", 4]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:56:49 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentor_id" = ?[0m  [["mentor_id", 4]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/4" for ::1 at 2020-02-18 11:56:57 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentor_id" = ?[0m  [["mentor_id", 4]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-18 11:57:01 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PqGTpk5OgogJNJYsqXXcxfSNlG198cLbI65GU25ZonSU06UGyiRGaIbGbI5GVTsd8G0NqnhbRuq9WNha6uztFA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 11:57:01 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (13.5ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-18 11:57:02 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 65ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-18 11:57:21 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8ve22mifvvK+MsUYZNtLeewMw5DPH66r+2VHB+bG90/CuU9jC7ZqlPWsYLEEN8LT44HhyM2m5fiOo8vEA7UZmg==", "session"=>{"email"=>"ben@ben.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ben@ben.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 63ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2020-02-18 11:57:21 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/users_controller.rb:23:in `show'
+Started GET "/users/1" for ::1 at 2020-02-18 11:58:11 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 52ms (Views: 33.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for ::1 at 2020-02-18 11:58:57 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (58.4ms)
+Completed 200 OK in 128ms (Views: 125.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2020-02-18 11:59:57 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2020-02-18 12:00:23 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 159ms (Views: 103.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 12:01:05 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/help" for ::1 at 2020-02-18 12:01:05 -0800
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/info" for ::1 at 2020-02-18 12:01:06 -0800
+Processing by StaticPagesController#info as HTML
+  Rendering static_pages/info.html.erb within layouts/application
+  Rendered static_pages/info.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+Completed 200 OK in 43ms (Views: 40.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2020-02-18 12:01:07 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+Completed 200 OK in 86ms (Views: 84.5ms | ActiveRecord: 0.1ms)
+
+

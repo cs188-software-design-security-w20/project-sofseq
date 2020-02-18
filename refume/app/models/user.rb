@@ -1,4 +1,15 @@
 class User < ApplicationRecord
+  # explicitly tells Rails the foreign_key is "mentor_id"
+  # An id used to connect two database tables is known as a foreign key
+  # This is an active match relationship for someone who initiates a match
+  #has_many :active_matches, class_name: "Match", foreign_key: "mentor_id", dependent: :destroy
+  # While for someone who does not initiates a match and get arrange to a match is passive match
+  #has_many :passive_matches, class_name:  "Match", foreign_key: "mentee_id", dependent: :destroy
+
+  # explicitly tells Rails that the source of the 'mentor_id array' is the set of 'mentor ids'.
+  #has_many :following, through: :active_matches, source: :mentee
+  #has_many :followers, through: :passive_matches, source: :mentor
+
   # remember_token and activation_token are a virtual attribute for User
   # It used to store a token for the user.
   attr_accessor :remember_token, :activation_token, :reset_token
