@@ -1,6 +1,8 @@
 <% provide(:title, @user.name) %>
-<% if @user.role %>
-  <h1 style="text-align:center;"> Match Records</h1>
+<% if @user.role.downcase == "mentee" %>
+  <h1 style="text-align:center;"> Matched Mentors </h1>
+<% else %>
+  <h1 style="text-align:center;"> Matched Mentees </h1>
 <% end %>
 <div class="row">
   <aside class="col-md-4">
@@ -18,17 +20,18 @@
   </aside>
 </div>
 
+<br>
 <div style="text-align:center;">
-  <% if @user.role == "Mentor" %>
-    <ol style="font-size:17px">
+  <% if @user.role.downcase == "mentor" %>
+    <ul style="font-size:17px">
     <% @mentees.each do |mentee| %>
-      <p><li><%= mentee %></li></p>
+      <p><li><%= mentee.name + " | " + mentee.email %></li></p>
     <% end %>
-    </ol>
-  <% elsif @user.role == "Mentee" %>
+    </ul>
+  <% elsif @user.role.downcase == "mentee" %>
     <ol style="font-size:17px">
       <% @mentors.each do |mentor| %>
-      <p><li><%= mentor %></li></p>
+      <p><li><%= mentor.name + " | " + mentor.email %></li></p>
       <% end %>
     </ol>
   <% else %>

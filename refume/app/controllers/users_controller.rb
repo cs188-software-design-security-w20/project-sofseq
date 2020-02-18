@@ -11,23 +11,23 @@ class UsersController < ApplicationController
     @user = User.find_by_id(params[:id])
     #get all the matched mentors/mentees for this user
     @matches = nil
-    if @user.role == "Mentee"
+    if @user.role.downcase == "mentee"
       @matches = Match.where(mentee_id: @user.id)
-    elsif @user.role == "Mentor"
+    elsif @user.role.downcase == "mentor"
       @matches = Match.where(mentor_id: @user.id)
     end
 
     #retrieve all the mentors/mentees names
     @mentors = []
     @mentees = []
-    @matches = [] if @meatches.nil?
+    @matches = [] if @matches.nil?
     @matches.each do |match|
-      if @user.role == "Mentor"
+      if @user.role.downcase == "Mentor"
         user = User.find_by_id(match.mentee_id)
-        @mentees << user.name
+        @mentees << user
       else
         user = User.find_by_id(match.mentor_id)
-        @mentors << user.name
+        @mentors << user
       end
     end
 
