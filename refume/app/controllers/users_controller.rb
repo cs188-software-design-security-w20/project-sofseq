@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+  # To update personal information, the user must already log in;
+  # and that user can only modify his/her own information.
+  before_action :logged_in_user, only: [:edit, :update]
+  before_action :correct_user,   only: [:edit, :update, :show]
+
   def show
     #find_by method automatically does the sanity check on user input
     #to prevent SQL injection
@@ -7,16 +12,37 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
+    if logged_in?
+      flash[:danger] = "Please log out before signing up."
+      redirect_to(root_url)
+    else
+      @user = User.new
+    end
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "Welcome to RefuMe!"
-      redirect_to @user
+      # send activation link to user email
+      UserMailer.account_activation(@user).deliver_now
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
       render 'new'
+    end
+  end
+
+  def edit
+    @user = User.find_by_id(params[:id])
+  end
+
+  def update
+    @user = User.find_by_id(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "Profile updated"
+      redirect_to @user
+    else
+      render 'edit'
     end
   end
 
@@ -32,6 +58,25 @@ class UsersController < ApplicationController
     #handle mass assignment
     def user_params
       params.require(:user).permit(:name, :email, :age, :country, :language,
-                                   :zipcode, :goals, :password, :password_confirmation)
+                                   :zipcode, :goals, :bio, :password, :password_confirmation)
+    end
+
+    # Before filters
+    # Confirms a logged-in user.
+    def logged_in_user
+      unless logged_in?
+        #We store the location where the users want to go
+        #and then ask them to log in, once they log in, we will
+        #redirect them to that location.
+        store_location
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
+    end
+
+    # Confirms the correct user.
+    def correct_user
+      @user = User.find_by_id(params[:id])
+      redirect_to(root_url) unless current_user?(@user)
     end
 end

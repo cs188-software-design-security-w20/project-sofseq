@@ -22,6 +22,6 @@ test:
 
 production:
   <<: *default
-  database: refume_production
-  username: refume
-  password: <%= ENV['REFUME_DATABASE_PASSWORD'] %>
+  database: sofseq_production
+  username: sofseq
+  password: <%= ENV['sofseq_DATABASE_PASSWORD'] %>
