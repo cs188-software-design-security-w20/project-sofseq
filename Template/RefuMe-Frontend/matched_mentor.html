@@ -23,6 +23,72 @@
 }
 
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  display: inline-block;
+}
+
+/** {
+  box-sizing: border-box;
+}*/
+
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  /*padding: 2px 16px;*/
+  padding: 16px;
+  text-align: center;
+  display: inline-block;s
+
+}
+
+.column {
+    width: 100%;
+    /*display: block;*/
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  /*#firstDiv{
+    float: left;
+  }
+
+  #firstDiv{
+    float: left;
+  }
+*/
+
+  /* Remove extra left and right margins, due to padding */
+.row {margin: 0 40px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) /*{
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }*/
+/*}*/
+
+
+
+</style>
+
+
+
 <style> 
 input[type=text] {
   width: 130px;
@@ -42,7 +108,10 @@ input[type=text] {
 input[type=text]:focus {
   width: 100%;
 }
+
 </style>
+
+
 
 
 
@@ -265,17 +334,44 @@ window.onclick = function(event) {
   </nav>
 
 
-  <body>
-
-
-
+<body>
 <div style="margin: 0 auto;">
     <form action="" method="post" id="formC" action="" style="margin: 0 auto;">
-<br><br><br><br><br><br><br>
+<br>
     	<font color="white">
-    		<br>I Want to Be a ...</br>
-        <input type="button" value="Mentor"><br>
-        <input type="button" value="Mentee"><br>
+    		<br>Matched Mentors</br>
+        </font>
+
+<div class="row">
+  <div class="column">
+        <div class="card">
+        <img src="Sergey-Brin.png" alt="Avatar" style="width:100%">
+        <!-- <div class="container"> -->
+        <font color="Black">
+        <h4><b>Sergey Brin, From Russia</b></h4> 
+        <p>Brin developed Google with co-founder Larry Page while they were both PhD students at Stanford, where they filled their dorm with inexpensive computers and work, work, worked. When their search engine became popular on campus, they decided to drop out and start Google in a garage. Good call.</p> 
+        <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">Send Mail</a>
+
+    <!-- </div> -->
+  </div>
+</div>
+
+    
+    <div class="column">
+      <div class="card">
+        <img src="Anne-Elisabeth.png" alt="Avatar" style="width:100%">
+        <!-- <div class="container"> -->
+        <font color="Black">
+        <h4><b>Anne Elisabeth, From Belgium</b></h4> 
+        <p>An inspiration to female entrepreneurs the world over, Liz Claiborne revolutionized how the working woman dressed and in 1986, when Liz Claiborne Inc made the Fortune 500 list, it was the first company founded by a woman to make the cut. </p> 
+        <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">Send Mail</a>
+      </div>
+    <!-- </div> -->
+  </div>
+</div>
+
+
+
     </font>
     </form>
 </div>
