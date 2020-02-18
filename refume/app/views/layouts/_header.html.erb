@@ -1,19 +1,23 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "RefuMe", root_path, id: "logo" %>
+    <span style="width:70px;">
+      <%= image_tag("RefuMe-Logo.png", size: "60x60", class: "rounded float-left") %>
+    </span>
     <nav>
+      <%= link_to "RefuMe", root_path, id: "logo" %>
+
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
+        <li><%= link_to "Home", root_path, {:style => 'font-size:20px;'} %></li>
+        <li><%= link_to "Help", help_path, {:style => 'font-size:20px;'}%></li>
         <% if logged_in? %>
-          <li><%= link_to "Info", '#' %></li>
+          <li><%= link_to "Info", info_path, {:style => 'font-size:20px;'} %></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:20px">
               Account <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+              <li><%= link_to "Profile", current_user, {:style => 'font-size:15px;'} %></li>
+              <li><%= link_to "Settings", edit_user_path(current_user), {:style => 'font-size:15px;'} %></li>
               <li class="divider"></li>
               <li>
                 <%= link_to "Log out", logout_path, method: :delete %>
@@ -27,3 +31,4 @@
     </nav>
   </div>
 </header>
+<br>
