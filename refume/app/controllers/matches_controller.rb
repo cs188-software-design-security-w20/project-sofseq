@@ -16,9 +16,9 @@ class MatchesController < ApplicationController
     #@match = params[:id]
     #get all the matched mentors/mentees for this user
     @matches = nil
-    if @user.role.downcase == "mentee"
+    if @user.role == "Mentee"
       @matches = Match.where(mentee_id: @user.id)
-    elsif @user.role.downcase == "mentor"
+    elsif @user.role == "Mentor"
       @matches = Match.where(mentor_id: @user.id)
     end
   end

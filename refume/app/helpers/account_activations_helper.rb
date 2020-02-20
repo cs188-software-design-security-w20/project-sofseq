@@ -1,7 +1,8 @@
 module AccountActivationsHelper
   def get_matched_mentor_emails(stdout)
       splits = stdout.split(',')
-      puts splits
+      splits.map { |email| email.delete!("\n") }
+      return splits
   end
 
   # Need to implement this
@@ -9,7 +10,7 @@ module AccountActivationsHelper
   end
 
   def find_match(mentee, mentors)
-      query = ["python3", "matching_ruby_compatible.py"]
+      query = ["python3", "app/helpers/matching_ruby_compatible.py"]
       query.append(mentee)
       mentors.each do |item|
           query.append(item)
