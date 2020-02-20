@@ -25,7 +25,7 @@ bio_arr = ["My family is very important to me, and I grew up living with three s
                  password_digest:       password,
                  language: language_arr[n],
                  bio: bio_arr[n],
-                 role: n < n-2 ? "mentor" : "mentee",
+                 role: n < 4 ? "mentee" : "mentor",
                  activated: true)
   end
 
