@@ -25,13 +25,15 @@
   <% if @user.role.downcase == "mentor" %>
     <ul style="font-size:17px">
     <% @mentees.each do |mentee| %>
-      <p><li><%= mentee.name + " | " + mentee.email %></li></p>
+      <p><li><%= mentee.name%></li></p>
+      <a href= "mailto:#{mentee.email}" target="_top"><%= mentee.email %></a>
     <% end %>
     </ul>
   <% elsif @user.role.downcase == "mentee" %>
     <ol style="font-size:17px">
       <% @mentors.each do |mentor| %>
-      <p><li><%= mentor.name + " | " + mentor.email %></li></p>
+      <p><li><%= mentor.name%></li></p>
+      <a href= "mailto:#{mentor.email}" target="_top"><%= mentor.email %></a>
       <% end %>
     </ol>
   <% else %>

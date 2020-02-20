@@ -13,7 +13,12 @@ class AccountActivationsController < ApplicationController
       #redirect user to pages based on their role selection
       #implement later here
       #redirect_to user
+
+      #the matching algorithm should be called here
+
+
       redirect_to matches_path
+
     else
       flash[:danger] = "Invalid activation link"
       redirect_to root_url
