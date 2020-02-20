@@ -7,6 +7,9 @@ class MatchesController < ApplicationController
     #should be the following line when our matching feature is implemented
     @user = current_user
     #@matches = Match.All
+    pyscript_path = Rails.root.join('test.py')
+    result = `python3 #{pyscript_path} "Stewart"`
+    puts result
   end
 
   # GET /matches/1
