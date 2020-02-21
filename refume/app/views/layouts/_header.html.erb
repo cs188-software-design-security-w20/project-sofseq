@@ -1,4 +1,4 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-expand-sm navbar-inverse">
   <div class="container">
     <span style="width:70px;">
       <%= image_tag("RefuMe-Logo.png", size: "60x60", class: "rounded float-left") %>
@@ -8,9 +8,9 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path, {:style => 'font-size:20px;'} %></li>
-        <li><%= link_to "Help", help_path, {:style => 'font-size:20px;'}%></li>
         <% if logged_in? %>
           <li><%= link_to "Info", info_path, {:style => 'font-size:20px;'} %></li>
+          <li><%= link_to "Discussion Forum", "/posts", {:style => 'font-size:20px;'}%></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:20px">
               Account <b class="caret"></b>
