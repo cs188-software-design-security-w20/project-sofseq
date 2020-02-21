@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200218100401) do
+ActiveRecord::Schema.define(version: 20200221052432) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 20200218100401) do
   end
 
   create_table "microposts", force: :cascade do |t|
+    t.text "content"
+    t.integer "user_id"
+    t.integer "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
     t.text "content"
     t.integer "user_id"
     t.integer "category_id"

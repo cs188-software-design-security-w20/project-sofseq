@@ -8,7 +8,7 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path, {:style => 'font-size:20px;'} %></li>
-        <li><%= link_to "Help", help_path, {:style => 'font-size:20px;'}%></li>
+        <li><%= link_to "Discussion Form", "/posts", {:style => 'font-size:20px;'}%></li>
         <% if logged_in? %>
           <li><%= link_to "Info", info_path, {:style => 'font-size:20px;'} %></li>
           <li class="dropdown">
