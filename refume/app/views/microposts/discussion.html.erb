@@ -21,33 +21,38 @@
                         <label for="category"><strong>Choose Forum Category</strong></label>
                         <select id="category">
                             <option value="housing">Housing</option>
-                            <option value="saab">Education</option>
-                            <option value="mercedes">Transportation</option>
-                            <option value="audi">Citizenship</option>
-                            <option value="">Travel</option>
-                            <option value="">Shopping</option>
-                            <option value="">Career</option>
+                            <option value="education">Education</option>
+                            <option value="transportation">Transportation</option>
+                            <option value="citizenship">Citizenship</option>
+                            <option value="travel">Travel</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="career">Career</option>
                         </select>
                         <br/>
                     </div>
-                    <div class="form-group">
-                        <label for="discussion_post">Your Comment</label>
-                        <textarea class="form-control" id="discussion_post" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-dark">Submit</button>
+                       <%= form_for(@micropost) do |f| %>
+                          <%= render 'shared/error_messages' %>
+
+                          <%= f.label :category_id %>
+                          <%= f.text_field :category_id, class: 'form-control' %>
+
+                          <%= f.label :content %>
+                          <%= f.text_field :content, class: 'form-control' %>
+
+                          <%= f.submit "Create post", class: "btn btn-primary" %>
+                      <% end %>
                 </form>
             </div>
         </div>
-    <p>
     <% Micropost.all.entries.reverse.each do | entry | %>
-      <% if not entry.nil? %>
-        <div class="card" style="width: 18rem; margin: auto; width: 50%;">
-            <div class="card-body">
-                <% entry.text %>
+        <% if not entry.nil? %>
+            <div class="card" style="width: 18rem; margin: auto; width: 50%;">
+                <div class="card-body">
+                    <% entry.category_id %>
+                    <% entry.text %>
+                </div>
             </div>
-        </div>
-      <% end %>
         <% end %>
-    </p>
+    <% end %>
     </body>
 </html>

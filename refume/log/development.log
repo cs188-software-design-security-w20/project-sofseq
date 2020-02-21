@@ -25107,6 +25107,7 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 49ms (Views: 38.0ms | ActiveRecord: 0.7ms)
 
 
+<<<<<<< HEAD
 Started DELETE "/logout" for ::1 at 2020-02-20 19:09:38 -0800
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by SessionsController#destroy as HTML
@@ -25281,3 +25282,24 @@ Completed 200 OK in 66ms (Views: 46.8ms | ActiveRecord: 0.3ms)
 
   [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."role" = ? LIMIT ?[0m  [["role", "Mentor"], ["LIMIT", 11]]
   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."role" = ?[0m  [["role", "Mentor"]]
+=======
+Started GET "/" for ::1 at 2020-02-20 19:30:34 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (27.0ms)
+Completed 200 OK in 2859ms (Views: 2851.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/info" for ::1 at 2020-02-20 19:30:45 -0800
+Processing by StaticPagesController#info as HTML
+  Rendering static_pages/info.html.erb within layouts/application
+  Rendered static_pages/info.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (26.4ms)
+Completed 200 OK in 1304ms (Views: 1296.1ms | ActiveRecord: 1.0ms)
+
+
+>>>>>>> db969732bd03da460906cfcc5a96e5a849c53f88
