@@ -19,8 +19,8 @@ Rails.application.routes.draw do
   get    '/login',         to: 'sessions#new'
   post   '/login',         to: 'sessions#create'
   delete '/logout',        to: 'sessions#destroy'
-  get    '/microposts'     to: 'microposts#index'
-  post   '/microposts'     to: 'microposts#create'
+  get    '/microposts',     to: 'microposts#index'
+  post   '/microposts',     to: 'microposts#create'
   post   '/matches/new',   to: 'matches#create'
   get    '/matches/:id',   to: 'matches#show'
   resources :users
