@@ -8,16 +8,17 @@ class InfoController < ApplicationController
 		@category = Category.new(category_params)
 		if @category.save
 			flash[:success] = "New category created!"
-			render 'index'
+			render 'discussion'
 		else
 			flash[:error] = "Failed to create new category"
-			render 'index', status: :unprocessable_entity
+			render 'discussion', status: :unprocessable_entity
 		end
 
 	end
 
 	def index
 		@categories = Category.all
+		render 'discussion'
 	end
 
 	private:
