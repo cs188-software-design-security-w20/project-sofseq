@@ -76,7 +76,7 @@ def find_mentor(mentee, mentors):
             cosine_similarities[idx] += 0.15
         cosine_similarities[idx] += 0.05 * number_of_common_languages(mentee_languages, mentor_languages)
     # Top 'k' compatible mentors
-    k = 3
+    k = 2
     top_3_indices = find_top_k_indices(cosine_similarities, k)
     matches = []
     for index in range(k):
@@ -94,7 +94,7 @@ def parse_input():
     mentee_data = mentee_raw.split('|')
     mentee = (
         mentee_data[0],
-        mentee_data[1], 
+        mentee_data[1],
         get_languages(mentee_data[2]),
         mentee_data[3],
         mentee_data[4]
@@ -104,7 +104,7 @@ def parse_input():
         mentor_data = mentor.split('|')
         new_mentor = (
             mentor_data[0],
-            mentor_data[1], 
+            mentor_data[1],
             get_languages(mentor_data[2]),
             mentor_data[3],
             mentor_data[4]
