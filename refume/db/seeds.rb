@@ -25,13 +25,26 @@ bio_arr = ["My family is very important to me, and I grew up living with three s
                  password_digest:       password,
                  language: language_arr[n],
                  bio: bio_arr[n],
-                 role: n < n-2 ? "mentor" : "mentee",
+                 role: n < 4 ? "Mentee" : "Mentor",
                  activated: true)
   end
 
+=begin
   4.times do |n|
     Match.create!(mentee_id: n+1,
                  mentor_id: (n+1).even? ? 5 : 6)
   end
+=end
 
+## testing
+User.create!(name: 'one', email: 'one@gmail.com',password: User.digest("012340"),
+              age: 33, zipcode: 90024, phone:"(123) 345-6789", language: 'English,Spanish,Italian,German',
+              country: 'Italy', goals: 'I hope to buy a big house',
+              bio:'I like eating Indian food and watching Bollywood movies. I spent three years learning how to dance.',
+              role: 'Mentor', activated: true)
 
+User.create!(name: 'two', email: 'two@gmail.com', password: User.digest("012340"),
+                age: 33, zipcode: 90024, phone:"(123) 345-6789", language: 'Mandarin,Cantonese,English',
+                country: 'China', goals: 'I hope to buy a big house',
+                bio:'I spent three years learning how to dance. And I like Chinese food.',
+                role: 'Mentor', activated: true)
