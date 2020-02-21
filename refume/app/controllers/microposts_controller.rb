@@ -15,9 +15,21 @@ class MicropostsController < ApplicationController
     	end
 	end
 
+	def index
+		@posts = Micropost.where({category_id: Category.find(valid_item)})
+	end
+
+	def show
+		@posts = Micropost.find(valid_item)
+	end
+
 	private
 		def micropost_params
 			params.require(:micropost).permit(:content, :user_id, :category_id)
+		end
+
+		def valid_item
+			params.require(:id)
 		end
 
 end
