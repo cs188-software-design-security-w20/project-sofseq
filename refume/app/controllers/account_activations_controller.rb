@@ -40,6 +40,7 @@ class AccountActivationsController < ApplicationController
       mentee = user_profile.join('|')
 
       mentors_profile = User.where(role: 'Mentor')
+      return if mentors_profile.nil?  
       mentors = []
 
       mentors_profile.each do |mentor|
