@@ -20,14 +20,14 @@ class UsersController < ApplicationController
     #retrieve all the mentors/mentees names
     @mentors = []
     @mentees = []
-    @matches = [] if @meatches.nil?
+    @matches = [] if @matches.nil?
     @matches.each do |match|
       if @user.role == "Mentor"
         user = User.find_by_id(match.mentee_id)
-        @mentees << user.name
+        @mentees << user
       else
         user = User.find_by_id(match.mentor_id)
-        @mentors << user.name
+        @mentors << user
       end
     end
 
@@ -48,6 +48,12 @@ class UsersController < ApplicationController
       # send activation link to user email
       UserMailer.account_activation(@user).deliver_now
       flash[:info] = "Please check your email to activate your account."
+
+      #for local testing
+      if @user.role == 'Mentee'
+        get_match(@user)
+      end
+
       redirect_to root_url
     else
       render 'new'
@@ -66,14 +72,6 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
-  end
-
-  def mentors
-    @matches = Match.where(mentee_id: @user.id)
-  end
-
-  def mentees
-    @matches = Match.where(mentor_id: @user.id)
   end
 
   private
@@ -100,5 +98,43 @@ class UsersController < ApplicationController
     def correct_user
       @user = User.find_by_id(params[:id])
       redirect_to(root_url) unless current_user?(@user)
+    end
+
+    def get_match(user)
+      user_profile = []
+      user_profile << user.email
+      user_profile << user.country
+      user_profile << user.language
+      user_profile << user.goals
+      user_profile << user.bio
+      mentee = user_profile.join('|')
+
+      mentors_profile = User.where(role: 'Mentor')
+      mentors = []
+
+      mentors_profile.each do |mentor|
+        mentor_profile = []
+        mentor_profile << mentor.email
+        mentor_profile << mentor.country
+        mentor_profile << mentor.language
+        mentor_profile << mentor.goals
+        mentor_profile << mentor.bio
+        mentors << mentor_profile.join('|')
+      end
+
+      # find match for this mentee
+      # It returns a list of mentors email
+      mentors_email = find_match(mentee, mentors)
+
+      # no matches found
+      if mentors_email != nil
+        # save the result to the database
+        # get the correspondingly mentors by email
+        mentors_email.each do |mentor_email|
+          mentor = User.find_by(email: mentor_email)
+          Match.create(mentor_id: mentor.id, mentee_id: user.id).save
+        end
+      end
+
     end
 end
