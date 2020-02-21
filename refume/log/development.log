@@ -25303,3 +25303,327 @@ Completed 200 OK in 1304ms (Views: 1296.1ms | ActiveRecord: 1.0ms)
 
 
 >>>>>>> db969732bd03da460906cfcc5a96e5a849c53f88
+Started GET "/microposts" for ::1 at 2020-02-20 20:19:47 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  Rendered microposts/discussion.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    30:                         </select>
+    31:                         <br/>
+    32:                     </div>
+    33:                        <%= form_for(@micropost) do |f| %>
+    34:                           <%= render 'shared/error_messages' %>
+    35: 
+    36:                           <%= f.label :category_id %>
+  
+app/views/microposts/discussion.html.erb:33:in `_app_views_microposts_discussion_html_erb___729665363843535454_19340'
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:31:36 -0800
+Processing by MicropostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `microposts' for #<User:0x00007ffc6fa34788>):
+  
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:37:58 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MicropostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `microposts' for #<User:0x00007ffc8fa2e890>):
+  
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:38:09 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  Rendered microposts/discussion.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 7ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    30:                         </select>
+    31:                         <br/>
+    32:                     </div>
+    33:                        <%= form_for(@micropost) do |f| %>
+    34:                           <%= render 'shared/error_messages' %>
+    35: 
+    36:                           <%= f.label :category_id %>
+  
+app/views/microposts/discussion.html.erb:33:in `_app_views_microposts_discussion_html_erb___729665363843535454_25680'
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:46:20 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  Rendered microposts/discussion.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms
+
+
+  
+SyntaxError (/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:33: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+...buffer.append=( if @micropost );@output_buffer.safe_append='
+...                              ^
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:45: syntax error, unexpected `end'
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:63: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:65: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/microposts/discussion.html.erb:33: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/microposts/discussion.html.erb:45: syntax error, unexpected `end'
+app/views/microposts/discussion.html.erb:63: syntax error, unexpected `ensure', expecting ')'
+app/views/microposts/discussion.html.erb:65: syntax error, unexpected `end', expecting ')'
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:50:26 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  Rendered microposts/discussion.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 9ms
+
+
+  
+SyntaxError (/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:33: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+...buffer.append=( if @micropost );@output_buffer.safe_append='
+...                              ^
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:45: syntax error, unexpected `end', expecting ')'
+                     end 
+                     ^~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:63: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:65: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/microposts/discussion.html.erb:33: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/microposts/discussion.html.erb:45: syntax error, unexpected `end', expecting ')'
+app/views/microposts/discussion.html.erb:63: syntax error, unexpected `ensure', expecting ')'
+app/views/microposts/discussion.html.erb:65: syntax error, unexpected `end', expecting ')'
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/users/25" for ::1 at 2020-02-20 20:51:32 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.6ms)
+
+
+  
+NoMethodError (undefined method `microposts' for #<User:0x00007ffc299c4668>):
+  
+app/controllers/users_controller.rb:19:in `show'
+Started GET "/users/25" for ::1 at 2020-02-20 20:51:49 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentee_id" = ?[0m  [["mentee_id", 25]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Started GET "/users/25" for ::1 at 2020-02-20 20:51:53 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentee_id" = ?[0m  [["mentee_id", 25]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 4939ms (Views: 4903.2ms | ActiveRecord: 2.4ms)
+
+
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 1239ms (Views: 1208.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/microposts" for ::1 at 2020-02-20 20:52:00 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  Rendered microposts/discussion.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:33: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+...buffer.append=( if @micropost );@output_buffer.safe_append='
+...                              ^
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:44: syntax error, unexpected `end'
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:45: syntax error, unexpected `end'
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:63: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:65: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/microposts/discussion.html.erb:33: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/microposts/discussion.html.erb:44: syntax error, unexpected `end'
+app/views/microposts/discussion.html.erb:45: syntax error, unexpected `end'
+app/views/microposts/discussion.html.erb:63: syntax error, unexpected `ensure', expecting ')'
+app/views/microposts/discussion.html.erb:65: syntax error, unexpected `end', expecting ')'
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:52:54 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  Rendered microposts/discussion.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:43: syntax error, unexpected `end'
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:61: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:63: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/microposts/discussion.html.erb:43: syntax error, unexpected `end'
+app/views/microposts/discussion.html.erb:61: syntax error, unexpected `ensure', expecting ')'
+app/views/microposts/discussion.html.erb:63: syntax error, unexpected `end', expecting ')'
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:53:05 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  Rendered microposts/discussion.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    30:                         </select>
+    31:                         <br/>
+    32:                     </div>
+    33:                        <%= form_for(@micropost) do |f| %>
+    34:                           <%= render 'shared/error_messages' %>
+    35: 
+    36:                           <%= f.label :category_id %>
+  
+app/views/microposts/discussion.html.erb:33:in `_app_views_microposts_discussion_html_erb___729665363843535454_41000'
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:54:44 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  Rendered microposts/discussion.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+Completed 200 OK in 86ms (Views: 84.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/microposts" for ::1 at 2020-02-20 20:55:34 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  Rendered microposts/discussion.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/microposts" for ::1 at 2020-02-20 21:08:32 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  Rendered microposts/discussion.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (28.4ms)
+Completed 200 OK in 107ms (Views: 102.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/post" for ::1 at 2020-02-20 21:08:40 -0800
+Processing by MicropostsController#new_form as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    30:                         </select>
+    31:                         <br/>
+    32:                     </div>
+    33:                        <%= form_for(@micropost) do |f| %>
+    34:                           <%= render 'shared/error_messages' %>
+    35: 
+    36:                           <%= f.label :category_id %>
+  
+app/views/microposts/new.html.erb:33:in `_app_views_microposts_new_html_erb___1016797970948987103_39180'
+app/controllers/microposts_controller.rb:31:in `new_form'
+Started GET "/post" for ::1 at 2020-02-20 21:11:14 -0800
+Processing by MicropostsController#create as HTML
+Completed 400 Bad Request in 4ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: micropost):
+  
+app/controllers/microposts_controller.rb:31:in `micropost_params'
+app/controllers/microposts_controller.rb:7:in `create'
+Started GET "/microposts/new" for ::1 at 2020-02-20 21:15:15 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/microposts/new"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
