@@ -58,7 +58,7 @@ class AccountActivationsController < ApplicationController
       mentors_email = find_match(mentee, mentors)
 
       # no matches found
-      if mentors_email != nil && mentors_email.empty?
+      if !mentors_email.nil? && !mentors_email.empty?
         # save the result to the database
         # get the correspondingly mentors by email
         mentors_email.each do |mentor_email|
