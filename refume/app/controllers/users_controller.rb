@@ -50,9 +50,9 @@ class UsersController < ApplicationController
       flash[:info] = "Please check your email to activate your account."
 
       #for local testing
-      if @user.role == 'Mentee'
-        get_match(@user)
-      end
+      #if @user.role == 'Mentee'
+      #  get_match(@user)
+      #end
 
       redirect_to root_url
     else
@@ -110,7 +110,7 @@ class UsersController < ApplicationController
       mentee = user_profile.join('|')
 
       mentors_profile = User.where(role: 'Mentor')
-      return if mentors_profile.nil?  
+      return if mentors_profile.nil?
       mentors = []
 
       mentors_profile.each do |mentor|
