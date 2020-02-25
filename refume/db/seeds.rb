@@ -48,3 +48,11 @@ User.create!(name: 'two', email: 'two@gmail.com', password: User.digest("012340"
                 country: 'China', goals: 'I hope to buy a big house',
                 bio:'I spent three years learning how to dance. And I like Chinese food.',
                 role: 'Mentor', activated: true)
+
+# Sample data for discussion forum
+Category.create!(name: "Education")
+Post.create!(content: "Does anyone know the most economical English courses in Westwood?", user_id: 1, category_id: 1)
+Post.create!(content: "Where can I find out a list of K-12 schools near Santa Monica?", user_id: 1, category_id: 1)
+Post.create!(content: "Is Santa Monica College a good option for transferring to UCLA?", user_id: 1, category_id: 1)
+Post.create!(content: "Who can take courses at UCLA Extension?", user_id: 1, category_id: 1)
+Post.create!(content: "Are there any free English courses around LA?", user_id: 1, category_id: 1)

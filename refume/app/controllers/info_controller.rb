@@ -21,7 +21,7 @@ class InfoController < ApplicationController
 		render 'discussion'
 	end
 
-	private:
+	private
 		def category_params
 			params.require(:category).permit(:name)
 		end

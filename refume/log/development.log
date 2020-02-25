@@ -25303,3 +25303,1405 @@ Completed 200 OK in 1304ms (Views: 1296.1ms | ActiveRecord: 1.0ms)
 
 
 >>>>>>> db969732bd03da460906cfcc5a96e5a849c53f88
+<<<<<<< HEAD
+Started GET "/microposts" for ::1 at 2020-02-20 20:19:47 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  Rendered microposts/discussion.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    30:                         </select>
+    31:                         <br/>
+    32:                     </div>
+    33:                        <%= form_for(@micropost) do |f| %>
+    34:                           <%= render 'shared/error_messages' %>
+    35: 
+    36:                           <%= f.label :category_id %>
+  
+app/views/microposts/discussion.html.erb:33:in `_app_views_microposts_discussion_html_erb___729665363843535454_19340'
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:31:36 -0800
+Processing by MicropostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `microposts' for #<User:0x00007ffc6fa34788>):
+  
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:37:58 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MicropostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `microposts' for #<User:0x00007ffc8fa2e890>):
+  
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:38:09 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  Rendered microposts/discussion.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 7ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    30:                         </select>
+    31:                         <br/>
+    32:                     </div>
+    33:                        <%= form_for(@micropost) do |f| %>
+    34:                           <%= render 'shared/error_messages' %>
+    35: 
+    36:                           <%= f.label :category_id %>
+  
+app/views/microposts/discussion.html.erb:33:in `_app_views_microposts_discussion_html_erb___729665363843535454_25680'
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:46:20 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  Rendered microposts/discussion.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms
+
+
+  
+SyntaxError (/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:33: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+...buffer.append=( if @micropost );@output_buffer.safe_append='
+...                              ^
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:45: syntax error, unexpected `end'
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:63: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:65: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/microposts/discussion.html.erb:33: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/microposts/discussion.html.erb:45: syntax error, unexpected `end'
+app/views/microposts/discussion.html.erb:63: syntax error, unexpected `ensure', expecting ')'
+app/views/microposts/discussion.html.erb:65: syntax error, unexpected `end', expecting ')'
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:50:26 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  Rendered microposts/discussion.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 9ms
+
+
+  
+SyntaxError (/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:33: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+...buffer.append=( if @micropost );@output_buffer.safe_append='
+...                              ^
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:45: syntax error, unexpected `end', expecting ')'
+                     end 
+                     ^~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:63: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:65: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/microposts/discussion.html.erb:33: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/microposts/discussion.html.erb:45: syntax error, unexpected `end', expecting ')'
+app/views/microposts/discussion.html.erb:63: syntax error, unexpected `ensure', expecting ')'
+app/views/microposts/discussion.html.erb:65: syntax error, unexpected `end', expecting ')'
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/users/25" for ::1 at 2020-02-20 20:51:32 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.6ms)
+
+
+  
+NoMethodError (undefined method `microposts' for #<User:0x00007ffc299c4668>):
+  
+app/controllers/users_controller.rb:19:in `show'
+Started GET "/users/25" for ::1 at 2020-02-20 20:51:49 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentee_id" = ?[0m  [["mentee_id", 25]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Started GET "/users/25" for ::1 at 2020-02-20 20:51:53 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentee_id" = ?[0m  [["mentee_id", 25]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 4939ms (Views: 4903.2ms | ActiveRecord: 2.4ms)
+
+
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 1239ms (Views: 1208.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/microposts" for ::1 at 2020-02-20 20:52:00 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  Rendered microposts/discussion.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:33: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+...buffer.append=( if @micropost );@output_buffer.safe_append='
+...                              ^
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:44: syntax error, unexpected `end'
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:45: syntax error, unexpected `end'
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:63: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:65: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/microposts/discussion.html.erb:33: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/microposts/discussion.html.erb:44: syntax error, unexpected `end'
+app/views/microposts/discussion.html.erb:45: syntax error, unexpected `end'
+app/views/microposts/discussion.html.erb:63: syntax error, unexpected `ensure', expecting ')'
+app/views/microposts/discussion.html.erb:65: syntax error, unexpected `end', expecting ')'
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:52:54 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  Rendered microposts/discussion.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:43: syntax error, unexpected `end'
+...eze;@output_buffer.append=( end );@output_buffer.safe_append...
+...                            ^~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:61: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+/Users/stewart/code/src/github.com/cs188-software-design-security-w20/project-sofseq/refume/app/views/microposts/discussion.html.erb:63: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/microposts/discussion.html.erb:43: syntax error, unexpected `end'
+app/views/microposts/discussion.html.erb:61: syntax error, unexpected `ensure', expecting ')'
+app/views/microposts/discussion.html.erb:63: syntax error, unexpected `end', expecting ')'
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:53:05 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  Rendered microposts/discussion.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    30:                         </select>
+    31:                         <br/>
+    32:                     </div>
+    33:                        <%= form_for(@micropost) do |f| %>
+    34:                           <%= render 'shared/error_messages' %>
+    35: 
+    36:                           <%= f.label :category_id %>
+  
+app/views/microposts/discussion.html.erb:33:in `_app_views_microposts_discussion_html_erb___729665363843535454_41000'
+app/controllers/microposts_controller.rb:22:in `index'
+Started GET "/microposts" for ::1 at 2020-02-20 20:54:44 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  Rendered microposts/discussion.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+Completed 200 OK in 86ms (Views: 84.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/microposts" for ::1 at 2020-02-20 20:55:34 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  Rendered microposts/discussion.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/microposts" for ::1 at 2020-02-20 21:08:32 -0800
+Processing by MicropostsController#index as HTML
+  Rendering microposts/discussion.html.erb within layouts/application
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  Rendered microposts/discussion.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (28.4ms)
+Completed 200 OK in 107ms (Views: 102.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/post" for ::1 at 2020-02-20 21:08:40 -0800
+Processing by MicropostsController#new_form as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    30:                         </select>
+    31:                         <br/>
+    32:                     </div>
+    33:                        <%= form_for(@micropost) do |f| %>
+    34:                           <%= render 'shared/error_messages' %>
+    35: 
+    36:                           <%= f.label :category_id %>
+  
+app/views/microposts/new.html.erb:33:in `_app_views_microposts_new_html_erb___1016797970948987103_39180'
+app/controllers/microposts_controller.rb:31:in `new_form'
+Started GET "/post" for ::1 at 2020-02-20 21:11:14 -0800
+Processing by MicropostsController#create as HTML
+Completed 400 Bad Request in 4ms
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: micropost):
+  
+app/controllers/microposts_controller.rb:31:in `micropost_params'
+app/controllers/microposts_controller.rb:7:in `create'
+Started GET "/microposts/new" for ::1 at 2020-02-20 21:15:15 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/microposts/new"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20200221052432)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200221052432"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/posts/new" for ::1 at 2020-02-20 21:25:43 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (379.8ms)
+  Rendered posts/new.html.erb within layouts/application (383.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (25.0ms)
+Completed 200 OK in 1859ms (Views: 1844.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts" for ::1 at 2020-02-20 21:26:02 -0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for ::1 at 2020-02-20 21:27:38 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (22.9ms)
+Completed 200 OK in 1182ms (Views: 1173.0ms | ActiveRecord: 1.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-1@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/posts" for ::1 at 2020-02-20 21:28:20 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (34.1ms)
+Completed 200 OK in 1139ms (Views: 1130.2ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-1@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-1@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 16]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 17]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 18]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 19]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 20]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 21]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 22]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 23]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 24]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 25]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 26]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 27]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 28]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-1@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Norwood Kozey"], ["email", "stewart.dulaney-1@gmail.com"], ["age", 1], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Italy"], ["goals", "I want to start my own company."], ["created_at", "2020-02-21 05:30:32.616860"], ["updated_at", "2020-02-21 05:30:32.616860"], ["password_digest", "$2a$10$CHw02Tg69sd5vW.gOfLLieQeShHJcidMGn9wB4VZJNsnobekp/1xu"], ["language", "English,Spanish,Italian,German"], ["bio", "My family is very important to me, and I grew up living with three sisters and a brother."], ["activation_digest", "$2a$10$nURwxzvmRokPajyY1XnSWuXIcrkeJTQlzbeHhX7k8U0IcXKfSf.7O"], ["activated", "t"], ["role", "Mentee"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-2@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Douglas Mayer"], ["email", "stewart.dulaney-2@gmail.com"], ["age", 2], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Iraq"], ["goals", "Set aside money for my children's education."], ["created_at", "2020-02-21 05:30:32.740400"], ["updated_at", "2020-02-21 05:30:32.740400"], ["password_digest", "$2a$10$ns4oT3MqGu0uuaiIX4Lqye85oWlPWhMLMIHQgJ/.4239rAQVhBgGK"], ["language", "Arabic"], ["bio", "I am 20 year old interested in technology, IT and computer science."], ["activation_digest", "$2a$10$ibIQKPMR/5ZeEZhCUFUB0u9bJpSyYMtKHZPLarJCAOZbByoBd5RE2"], ["activated", "t"], ["role", "Mentee"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-3@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kane Beahan"], ["email", "stewart.dulaney-3@gmail.com"], ["age", 3], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "India"], ["goals", "I hope to buy a big house."], ["created_at", "2020-02-21 05:30:32.849347"], ["updated_at", "2020-02-21 05:30:32.849347"], ["password_digest", "$2a$10$RRJ481g2L/XRPZBIhHFm7u6VcO3/at9LMfCOF97c.VjZbExBjuo3C"], ["language", "Hindi,English,Tamil"], ["bio", "I like eating Indian food and watching Bollywood movies. I spent three years learning how to dance."], ["activation_digest", "$2a$10$K1Koh3C1Ztkr1eApmF6z2.4Z.HwKW8iVPfpBQBsP9h3ptiovi2UUy"], ["activated", "t"], ["role", "Mentee"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-4@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Aric Herzog"], ["email", "stewart.dulaney-4@gmail.com"], ["age", 4], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Turkey"], ["goals", "Get my dream car."], ["created_at", "2020-02-21 05:30:32.953862"], ["updated_at", "2020-02-21 05:30:32.953862"], ["password_digest", "$2a$10$/.ZmyWNTZbBGjGyVjNeGOe30EaNzT0.SLm55bziCxMIVf3c76/oR."], ["language", "Turkish,English"], ["bio", "I play the guitar and enjoy discovering new musicians online. I also like computers."], ["activation_digest", "$2a$10$BBROTcfn5kbDucqr/DglvevIyO.a/H8kF9pvrA.fWI9EJ2Ovm0F2S"], ["activated", "t"], ["role", "Mentee"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-5@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Samson Kohler Sr."], ["email", "stewart.dulaney-5@gmail.com"], ["age", 5], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "China"], ["goals", "I hope I can star in a movie someday."], ["created_at", "2020-02-21 05:30:33.073900"], ["updated_at", "2020-02-21 05:30:33.073900"], ["password_digest", "$2a$10$aMH1QSsUOaUFVnFx/BEg4e/gg5evMx.KMfeG.rABSyUYu7tgKIGn6"], ["language", "Mandarin,Cantonese,English"], ["bio", "I have lived in China my entire life. I like to read books in my free time."], ["activation_digest", "$2a$10$5fn4l3HxN15x75elDZb33emTllJvAYo45dUjgGEFWWHI5E6vzyJWy"], ["activated", "t"], ["role", "Mentor"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "stewart.dulaney-6@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kassandra Steuber"], ["email", "stewart.dulaney-6@gmail.com"], ["age", 6], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Iraq"], ["goals", "Some day, I hope to be an astronaut and fly to the moon in a SpaceX rocket."], ["created_at", "2020-02-21 05:30:33.188122"], ["updated_at", "2020-02-21 05:30:33.188122"], ["password_digest", "$2a$10$uCrrVfaMXcR.qvOjAStacumw227nHVxihxg01gqOHN0A/hS0KiuM2"], ["language", "English,Arabic"], ["bio", "I enjoy reading astrophysics books and watching astrophysics videos online."], ["activation_digest", "$2a$10$cZ2xVQtEzJb9OyAeglYoS.ufwmJeI8e9.qLAOf3C5lBXUYRCzP25u"], ["activated", "t"], ["role", "Mentor"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "one@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (5.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "one"], ["email", "one@gmail.com"], ["age", 33], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "Italy"], ["goals", "I hope to buy a big house"], ["created_at", "2020-02-21 05:30:33.342151"], ["updated_at", "2020-02-21 05:30:33.342151"], ["password_digest", "$2a$10$gR086V7WaTJOONGqI3ycpeWD.P6oAOuoQA25kOdHcPeO0hfAOYLu."], ["language", "English,Spanish,Italian,German"], ["bio", "I like eating Indian food and watching Bollywood movies. I spent three years learning how to dance."], ["activation_digest", "$2a$10$32jjoQ8oAD0YZszXIyNoQ.OJJbunBErtQMtTXCz9h096eln3WX4gK"], ["activated", "t"], ["role", "Mentor"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "two@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "phone", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "activated", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "two"], ["email", "two@gmail.com"], ["age", 33], ["zipcode", 90024], ["phone", "(123) 345-6789"], ["country", "China"], ["goals", "I hope to buy a big house"], ["created_at", "2020-02-21 05:30:33.521227"], ["updated_at", "2020-02-21 05:30:33.521227"], ["password_digest", "$2a$10$nmuMwGDwjnaDsO5Pc2TXPOfit7ANFreTqR7rj5PlLD1MA73.X0Nx2"], ["language", "Mandarin,Cantonese,English"], ["bio", "I spent three years learning how to dance. And I like Chinese food."], ["activation_digest", "$2a$10$A6TEtGadzi32W.MMI9Whce6YcVsCgf7lAXXbTZ6FqZU4PUtfZFMt."], ["activated", "t"], ["role", "Mentor"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Education"], ["created_at", "2020-02-21 05:30:33.600213"], ["updated_at", "2020-02-21 05:30:33.600213"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("content", "user_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Does anyone know the most economical English courses in Westwood?"], ["user_id", 1], ["category_id", 1], ["created_at", "2020-02-21 05:30:33.620410"], ["updated_at", "2020-02-21 05:30:33.620410"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("content", "user_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Where can I find out a list of K-12 schools near Santa Monica?"], ["user_id", 1], ["category_id", 1], ["created_at", "2020-02-21 05:30:33.624176"], ["updated_at", "2020-02-21 05:30:33.624176"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("content", "user_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Is Santa Monica College a good option for transferring to UCLA?"], ["user_id", 1], ["category_id", 1], ["created_at", "2020-02-21 05:30:33.627472"], ["updated_at", "2020-02-21 05:30:33.627472"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("content", "user_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Who can take courses at UCLA Extension?"], ["user_id", 1], ["category_id", 1], ["created_at", "2020-02-21 05:30:33.630649"], ["updated_at", "2020-02-21 05:30:33.630649"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("content", "user_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Are there any free English courses around LA?"], ["user_id", 1], ["category_id", 1], ["created_at", "2020-02-21 05:30:33.633566"], ["updated_at", "2020-02-21 05:30:33.633566"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/posts" for ::1 at 2020-02-20 21:31:08 -0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (11.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (6.5ms)
+Completed 200 OK in 1101ms (Views: 1090.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-02-20 21:31:25 -0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (304.5ms)
+  Rendered posts/new.html.erb within layouts/application (305.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 349ms (Views: 347.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2020-02-20 21:32:05 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (10.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (10.4ms)
+Completed 200 OK in 1190ms (Views: 1182.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/help" for ::1 at 2020-02-20 21:32:51 -0800
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (6.0ms)
+Completed 200 OK in 64ms (Views: 61.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/help" for ::1 at 2020-02-20 21:34:09 -0800
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for ::1 at 2020-02-20 21:34:11 -0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.3ms)
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.4ms)
+=======
+Started GET "/" for ::1 at 2020-02-20 20:06:30 -0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (29.9ms)
+Completed 200 OK in 7745ms (Views: 7738.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/help" for ::1 at 2020-02-20 20:06:41 -0800
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (28.8ms)
+Completed 200 OK in 104ms (Views: 102.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/info" for ::1 at 2020-02-20 20:06:42 -0800
+Processing by StaticPagesController#info as HTML
+  Rendering static_pages/info.html.erb within layouts/application
+  Rendered static_pages/info.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 97ms (Views: 95.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/25/edit" for ::1 at 2020-02-20 20:06:44 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered users/edit.html.erb within layouts/application (330.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 367ms (Views: 358.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/25" for ::1 at 2020-02-20 20:06:45 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentee_id" = ?[0m  [["mentee_id", 25]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 60ms (Views: 40.7ms | ActiveRecord: 2.0ms)
+>>>>>>> 263550a9e8a1f86307fdd5908b33e7716fa43fdd
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "matches"[0m
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+Started GET "/users/25" for ::1 at 2020-02-20 22:22:35 -0800
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `role' for nil:NilClass):
+  
+app/controllers/users_controller.rb:14:in `show'
+Started GET "/users/" for ::1 at 2020-02-20 22:22:54 -0800
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-02-20 22:22:55 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Started GET "/" for ::1 at 2020-02-20 22:22:56 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 21741ms (Views: 21739.2ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 22727ms (Views: 22723.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-20 22:23:23 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (391.8ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 526ms (Views: 523.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-20 22:23:31 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jv8S2cy2T3OYBQRWLAfBQMLmW+q/0D6zg/oyKI/pIsI8wCWibSfhCTp/yyXHNIhuugnIibPXp1wlQWwYSI3VAw==", "session"=>{"email"=>"susan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "susan@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 73ms (Views: 68.8ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/login" for ::1 at 2020-02-20 22:23:48 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hvMPEqRH4OOr5UvMR37ApHYJUl/sA/c50aShGzMiASI/h5ST+C0inIOmAM521UR8U0kYon98SZcpcxVRJLdG+A==", "session"=>{"email"=>"susan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "susan@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "ben"], ["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Started GET "/signup" for ::1 at 2020-02-20 22:24:42 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 103ms (Views: 79.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for ::1 at 2020-02-20 22:25:13 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jZYD1jtu8aFmRc+olHaT7sSjKnJI5tFsFB2rfGTRVfLDcqU7oTrTNi0WAhFU/2bg+oMC4gWmwqafrcL/Opsg+g==", "user"=>{"name"=>"ben", "email"=>"ben@ben.com", "age"=>"12", "zipcode"=>"123", "country"=>"China", "language"=>"Spanish", "role"=>"Mentee", "goals"=>"cars", "bio"=>"happy", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "ben@ben.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "ben"], ["email", "ben@ben.com"], ["age", 12], ["zipcode", 123], ["country", "China"], ["goals", "cars"], ["created_at", "2020-02-21 06:25:13.206991"], ["updated_at", "2020-02-21 06:25:13.206991"], ["password_digest", "$2a$10$ZkJB1w1JZlj2ij4XGh09A.dPQ5w7MM0EN1WeiqrqsrTEHOzDiC6/6"], ["language", "Spanish"], ["bio", "happy"], ["activation_digest", "$2a$10$5E0zJZ5F9Oc14c.DhTwgQud.SnkbnuNVBRbg0AwDrQqc7aiQ4.406"], ["role", "Mentee"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (3.2ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.5ms)
+UserMailer#account_activation: processed outbound mail in 251.2ms
+Sent mail to ben@ben.com (10.0ms)
+Date: Thu, 20 Feb 2020 22:25:13 -0800
+From: noreply@refume.com
+To: ben@ben.com
+Message-ID: <5e4f77c9cb713_7ee3fddce18a024266af@Howards-MacBook-Pro-2.local.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e4f77c9c9f5f_7ee3fddce18a0242657d";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e4f77c9c9f5f_7ee3fddce18a0242657d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi ben,
+
+Welcome to RefuMe! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/L2WLfZYMWz-kFjru5CqHbA/edit?email=ben%40ben.com
+
+
+----==_mimepart_5e4f77c9c9f5f_7ee3fddce18a0242657d
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>RefuMe</h1>
+
+<p>Hi ben,</p>
+
+<p>
+Welcome to RefuMe! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/L2WLfZYMWz-kFjru5CqHbA/edit?email=ben%40ben.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5e4f77c9c9f5f_7ee3fddce18a0242657d--
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "Mentor"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "two@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("mentor_id", "mentee_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mentor_id", 36], ["mentee_id", 37], ["created_at", "2020-02-21 06:25:16.680370"], ["updated_at", "2020-02-21 06:25:16.680370"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "stewart.dulaney-5@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("mentor_id", "mentee_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mentor_id", 33], ["mentee_id", 37], ["created_at", "2020-02-21 06:25:16.684522"], ["updated_at", "2020-02-21 06:25:16.684522"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3579ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/" for ::1 at 2020-02-20 22:25:16 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+Completed 200 OK in 1754ms (Views: 1752.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "ben"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "ben@ben.com"], ["id", 37], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "activated" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2020-02-21 06:25:50.879706"], ["activated", "t"], ["id", 37]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/login" for ::1 at 2020-02-20 22:25:52 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 37ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-20 22:26:00 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vGJHmXvD3oI3CdiT+V5jqa4xiTCQ1+l/N9uw7kgtzW6mXXDi2lJw+JVzF+ASbSqH1t4aU5zQcJCRYO7ej0k6rw==", "session"=>{"email"=>"ben@ben.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ben@ben.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/37
+Completed 302 Found in 72ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/37" for ::1 at 2020-02-20 22:26:00 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentee_id" = ?[0m  [["mentee_id", 37]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 41ms (Views: 31.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 10:10:28 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (36.7ms)
+Completed 200 OK in 5803ms (Views: 5796.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/37" for ::1 at 2020-02-21 10:10:38 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentee_id" = ?[0m  [["mentee_id", 37]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 56ms (Views: 39.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/RefuMe-Logo.png" for ::1 at 2020-02-21 10:10:38 -0800
+Processing by UsersController#show as PNG
+  Parameters: {"id"=>"RefuMe-Logo"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 10:10:38 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-21 10:10:51 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xBo8HQuxjdD4FlL+G65e+/rTlOGV8rEBVYsQaTTisuV9bqecV9tPr9BVGfwqBdoj35PeHAaND6+tXKQjI3f1Pw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 10:10:51 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-21 10:10:55 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (361.8ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 400ms (Views: 394.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-21 10:11:12 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GeE2jvFwt9NvEPP0pcN0D5YQbg3qGEhaaiE5jylkuicD3gH1UOEZqc1qPIdO8D0h7v/9buYf0bXMmme/7gBN5g==", "session"=>{"email"=>"ben@ben.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ben@ben.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/37
+Completed 302 Found in 64ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/37" for ::1 at 2020-02-21 10:11:12 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentee_id" = ?[0m  [["mentee_id", 37]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 32ms (Views: 28.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for ::1 at 2020-02-21 10:11:14 -0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 80ms (Views: 73.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/37" for ::1 at 2020-02-21 10:11:17 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentee_id" = ?[0m  [["mentee_id", 37]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 78ms (Views: 50.8ms | ActiveRecord: 2.7ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-21 10:11:20 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZvKGXLq3+5axlcf+qB2gWGZEEAc2dvmnEY0Riq8uad/fhh3d5t056ZnWjPyZtiSAQwRa+qUJRwnpWqXAuLsuBQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 10:11:20 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-21 10:11:21 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 10:43:59 -0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (5.9ms)
+Completed 200 OK in 2254ms (Views: 2249.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 10:44:02 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 128ms (Views: 127.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 10:53:19 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 66ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-21 10:58:33 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (436.3ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 495ms (Views: 493.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-21 10:58:45 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 107ms (Views: 88.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2020-02-21 10:59:19 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qYtVJ/S96juWWD6oTYdkLtDyNOxVELeDSA4Fo/HFzAvnb/PKbunIrN0L8xGNDpEg7tIcfBhQpEnDvmwgr4+5Aw==", "user"=>{"name"=>"hello", "email"=>"hello@gmail.com", "age"=>"12", "zipcode"=>"12313", "country"=>"sdf", "language"=>"sdfsdf", "role"=>"Mentee", "goals"=>"sdfsdfq", "bio"=>"sdfsdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "hello@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "hello"], ["email", "hello@gmail.com"], ["age", 12], ["zipcode", 12313], ["country", "sdf"], ["goals", "sdfsdfq"], ["created_at", "2020-02-21 18:59:19.625457"], ["updated_at", "2020-02-21 18:59:19.625457"], ["password_digest", "$2a$10$ddQna23Jogooj0S/UXgJlOnNJEx4dfSMnfXuZY3xK73jXZy8pju0y"], ["language", "sdfsdf"], ["bio", "sdfsdf"], ["activation_digest", "$2a$10$6ABP3YpS4uVD6kyK3Vh7QulA3ErYx6AVtQMzXIqm7gT4Vvsvk7GNW"], ["role", "Mentee"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.4ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.8ms)
+UserMailer#account_activation: processed outbound mail in 170.2ms
+Sent mail to hello@gmail.com (12.2ms)
+Date: Fri, 21 Feb 2020 10:59:20 -0800
+From: noreply@refume.com
+To: hello@gmail.com
+Message-ID: <5e5028885eaed_97e53fc7d13554c0535ed@Howards-MacBook-Pro-2.local.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e5028885c87e_97e53fc7d13554c053438";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e5028885c87e_97e53fc7d13554c053438
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi hello,
+
+Welcome to RefuMe! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/RyAggJTOGY6Qqi09XWVfMQ/edit?email=hello%40gmail.com
+
+
+----==_mimepart_5e5028885c87e_97e53fc7d13554c053438
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>RefuMe</h1>
+
+<p>Hi hello,</p>
+
+<p>
+Welcome to RefuMe! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/RyAggJTOGY6Qqi09XWVfMQ/edit?email=hello%40gmail.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5e5028885c87e_97e53fc7d13554c053438--
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = ?[0m  [["role", "Mentor"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "two@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "matches" ("mentor_id", "mentee_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mentor_id", 36], ["mentee_id", 38], ["created_at", "2020-02-21 18:59:23.583604"], ["updated_at", "2020-02-21 18:59:23.583604"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("mentor_id", "mentee_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["mentor_id", 35], ["mentee_id", 38], ["created_at", "2020-02-21 18:59:23.589825"], ["updated_at", "2020-02-21 18:59:23.589825"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4031ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 10:59:23 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (4.1ms)
+Completed 200 OK in 109ms (Views: 108.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 10:59:28 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 106ms (Views: 105.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-21 11:00:54 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-21 11:00:58 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3PFL5ldn/C70ekMbW3S0fH7YfXuaD9pm0y0QL66bCA9TPJUOMwxihmrJn+GXpv/iRTyluJvpoY99+pwed6b4Q==", "session"=>{"email"=>"ben@ben.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ben@ben.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/37
+Completed 302 Found in 63ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/37" for ::1 at 2020-02-21 11:00:58 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentee_id" = ?[0m  [["mentee_id", 37]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (4.5ms)
+Completed 200 OK in 56ms (Views: 48.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for ::1 at 2020-02-21 11:00:59 -0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 65ms (Views: 59.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/1" for ::1 at 2020-02-21 11:01:01 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.6ms)
+Completed 200 OK in 53ms (Views: 46.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/info" for ::1 at 2020-02-21 11:01:05 -0800
+Processing by StaticPagesController#info as HTML
+  Rendering static_pages/info.html.erb within layouts/application
+  Rendered static_pages/info.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 11:01:06 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 32ms (Views: 28.2ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-21 11:01:07 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UWqd8ZiYSUPvKq38a0ouqHkDko9MfQmJosHjsWSOzOnoHgZwxPKLPMdp5v5a4apwXEPYct8CtydaFlf7cxuLMw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 11:01:07 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 62ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-21 11:03:15 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-21 11:03:19 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KyCOlNCoWBJZEqcIb3iFWVy6pWsAKeA5vlq4quj8fgwxH7nvcTn2aPtoaHuES8x3JFU2CAwuedYY4eaaL5iJzQ==", "session"=>{"email"=>"ben@ben.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ben@ben.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/37
+Completed 302 Found in 62ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/37" for ::1 at 2020-02-21 11:03:19 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentee_id" = ?[0m  [["mentee_id", 37]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 34ms (Views: 29.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-21 11:03:28 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/+WNfIGeijrbSr263joMCMRTD1KpBSqNyWUagiBZj4NGkRb93fRIRfMJ9rjvkYjQ4RNFrzp6lCMxsq7IN8zIWQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 11:03:28 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 62ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-21 11:07:53 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 55ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 11:07:58 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 51ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 11:08:24 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 80ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 11:08:24 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 48ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 11:08:34 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 92ms (Views: 91.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-21 11:08:35 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (26.1ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 111ms (Views: 110.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-21 11:08:36 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 52ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-21 11:37:47 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 77ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-21 11:37:52 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TmaCZoHeHXEco4DY6VThLpZ2rgqPosx5CbX+EHQz8YtUWbUdIE+zC77ZT6sCZ6gA7pk9aYOlVZavDqAgs1cGSg==", "session"=>{"email"=>"ben@ben.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ben@ben.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/37
+Completed 302 Found in 59ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/37" for ::1 at 2020-02-21 11:37:52 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentee_id" = ?[0m  [["mentee_id", 37]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 0.6ms)
+
+
