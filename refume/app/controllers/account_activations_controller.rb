@@ -40,7 +40,7 @@ class AccountActivationsController < ApplicationController
       mentee = user_profile.join('|')
 
       mentors_profile = User.where(role: 'Mentor')
-      return if mentors_profile.nil?  
+      return if mentors_profile.nil?
       mentors = []
 
       mentors_profile.each do |mentor|
@@ -57,12 +57,16 @@ class AccountActivationsController < ApplicationController
       # It returns a list of mentors email
       mentors_email = find_match(mentee, mentors)
 
-      # save the result to the database
-      # get the correspondingly mentors by email
-      mentors_email.each do |mentor_email|
-        mentor = User.where(email: mentor_email)
-        Match.create(mentor_id: mentor.id, mentee_id: user.id).save
+      # no matches found
+      if mentors_email != nil && mentors_email.empty?
+        # save the result to the database
+        # get the correspondingly mentors by email
+        mentors_email.each do |mentor_email|
+          mentor = User.find_by(email: mentor_email)
+          Match.create(mentor_id: mentor.id, mentee_id: user.id).save
+        end
       end
+
     end
 
 end
