@@ -37,11 +37,11 @@ module UsersHelper
   end
 
   # Use test encryption keys
-  SymmetricEncryption.cipher = SymmetricEncryption::Cipher.new(
-    key:         '7w!z%C*F)J@NcRfU',
-    iv:          'Xn2r5u8x/A?D(G+K',
-    cipher_name: 'aes-128-cbc'
-  )
+  #SymmetricEncryption.cipher = SymmetricEncryption::Cipher.new(
+  #  key:         '7w!z%C*F)J@NcRfU',
+  #  iv:          'Xn2r5u8x/A?D(G+K',
+  #  cipher_name: 'aes-128-cbc'
+  #)
 
   #encrypted = SymmetricEncryption.encrypt('hello world')
   #SymmetricEncryption.decrypt(encrypted)

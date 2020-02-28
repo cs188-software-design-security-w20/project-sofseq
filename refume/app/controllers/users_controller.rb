@@ -44,6 +44,7 @@ class UsersController < ApplicationController
 
   def create
 
+=begin
     encrypted_user_params = {}
     user_params.each do |key, value|
       if key != 'password' && key != 'password_confirmation'
@@ -56,7 +57,7 @@ class UsersController < ApplicationController
     p "_________________"
     p encrypted_user_params
     p "_________________"
-
+=end
     @user = User.new(user_params)
     if @user.save
       # send activation link to user email

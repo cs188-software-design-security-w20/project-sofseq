@@ -27789,3 +27789,242 @@ app/helpers/users_helper.rb:40:in `<module:UsersHelper>'
 app/helpers/users_helper.rb:1:in `<top (required)>'
 app/controllers/application_controller.rb:1:in `<top (required)>'
 app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2020-02-27 20:47:22 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant UsersHelper::SymmetricEncryption):
+  
+app/helpers/users_helper.rb:40:in `<module:UsersHelper>'
+app/helpers/users_helper.rb:1:in `<top (required)>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2020-02-27 20:48:06 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (6.2ms)
+Completed 200 OK in 5292ms (Views: 5290.6ms)
+
+
+Started GET "/" for ::1 at 2020-02-27 20:48:49 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (4.6ms)
+Completed 200 OK in 1593ms (Views: 1587.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-28 02:01:54 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 1543ms (Views: 1537.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-28 02:01:57 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (339.4ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 374ms (Views: 372.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-28 02:01:59 -0800
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/user.rb:26:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:41:in `new'
+Started GET "/signup" for ::1 at 2020-02-28 02:03:09 -0800
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (410.4ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 2208ms (Views: 2187.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2020-02-28 02:03:33 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iDlzhwFtWA/yn1axFHDOyTuE7nZptvDye4Uq9yfV9+8xTegGXQeacNrcHbMl20oRHsSki/rJTlyDUp69MECwNQ==", "user"=>{"name"=>"junyu", "email"=>"junyu@gmail.com", "age"=>"11", "zipcode"=>"111", "country"=>"sdf", "language"=>"sdf", "role"=>"Mentor", "goals"=>"sdff", "bio"=>"sdff", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "junyu@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 114ms (Views: 48.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for ::1 at 2020-02-28 02:03:56 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6eHZUj7d6W/YbmfN9/LD4514ObRb4SnrSyt0p0iAkodQlULTYrcrEPAtLM/GWUc7uDhzSciel0Wz/MDtXxXVXQ==", "user"=>{"name"=>"junyu", "email"=>"junyu@gmail.com", "age"=>"11", "zipcode"=>"111", "country"=>"sdf", "language"=>"sdf", "role"=>"Mentor", "goals"=>"sdff", "bio"=>"sdff", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "junyu@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "junyu"], ["email", "junyu@gmail.com"], ["age", 11], ["zipcode", 111], ["country", "sdf"], ["goals", "sdff"], ["created_at", "2020-02-28 10:03:56.845747"], ["updated_at", "2020-02-28 10:03:56.845747"], ["password_digest", "$2a$10$C5pTXTMtjq6PZ2xVLhXpiuzG5PwY8/9PtErsulEHRzir7OL7Lig3a"], ["language", "sdf"], ["bio", "sdff"], ["activation_digest", "$2a$10$GWY1uqCINPVm2dRIiTd0MOvQ6k1nVf/xC8pqw.fBGpr7PdTkA57/e"], ["role", "Mentor"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.1ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.5ms)
+UserMailer#account_activation: processed outbound mail in 204.6ms
+Sent mail to junyu@gmail.com (9.0ms)
+Date: Fri, 28 Feb 2020 02:03:57 -0800
+From: noreply@refume.com
+To: junyu@gmail.com
+Message-ID: <5e58e58d5d4a2_5fa73fd370630adc7042@Howards-MBP-2.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e58e58d5bdfe_5fa73fd370630adc6991";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e58e58d5bdfe_5fa73fd370630adc6991
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi junyu,
+
+Welcome to RefuMe! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/ENyEiX0YcD0_5tiXBi1cUw/edit?email=junyu%40gmail.com
+
+
+----==_mimepart_5e58e58d5bdfe_5fa73fd370630adc6991
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>RefuMe</h1>
+
+<p>Hi junyu,</p>
+
+<p>
+Welcome to RefuMe! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/ENyEiX0YcD0_5tiXBi1cUw/edit?email=junyu%40gmail.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5e58e58d5bdfe_5fa73fd370630adc6991--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 602ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-28 02:03:57 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (9.7ms)
+Completed 200 OK in 74ms (Views: 73.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "junyu"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 48], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "junyu@gmail.com"], ["id", 48], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "activated" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2020-02-28 10:04:41.365764"], ["activated", "t"], ["id", 48]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/login" for ::1 at 2020-02-28 02:04:43 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 121ms (Views: 119.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-28 02:04:49 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Le17QvEwFibwrZJvlN+4G4JEoVefuJwMDhbn2mfaSPI30kw5UKG4XFLXXRx/7PE1+qsyNJO/BeOorbnqoL6/Mw==", "session"=>{"email"=>"junyu@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "junyu@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 171ms (Views: 105.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for ::1 at 2020-02-28 02:05:02 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QqDlQXtgyzTMBMkLqtJfy1NpvEtWYAlcZO7kBriTDLT71H7AJwoJS+RHggmbedsTdin2tsUft/KcOVBMrwZLbg==", "session"=>{"email"=>"junyu@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "junyu@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/48
+Completed 302 Found in 57ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/48" for ::1 at 2020-02-28 02:05:02 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"48"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 48], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 48], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 48], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."mentor_id" = ?[0m  [["mentor_id", 48]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 58ms (Views: 45.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/logout" for ::1 at 2020-02-28 02:05:07 -0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xZM5LHoc1Yn6CDgG2R4gi35gVqha6VZ1VEXiIkVbv0d856KtJnYX9tJLcwTotaRTWyAcVcmW6NusklZoUs74nQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 48], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-02-28 02:05:07 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-28 02:05:08 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-02-28 02:05:17 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QbUxttu3R7niGAjXXwmjB0O2oKsQnjX6cHuyfkBMmFdbigbNeibpw0Bix6S0OuopO1kzyByZrBXWwOxOhyhvlg==", "session"=>{"email"=>"junyu@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "junyu@gmail.com"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 97ms (Views: 31.0ms | ActiveRecord: 0.1ms)
+
+
