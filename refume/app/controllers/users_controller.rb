@@ -43,6 +43,20 @@ class UsersController < ApplicationController
   end
 
   def create
+
+    encrypted_user_params = {}
+    user_params.each do |key, value|
+      if key != 'password' && key != 'password_confirmation'
+        encrypted_user_params[key] = SymmetricEncryption.encrypt(value)
+      else
+        encrypted_user_params[key] = value
+      end
+    end
+
+    p "_________________"
+    p encrypted_user_params
+    p "_________________"
+
     @user = User.new(user_params)
     if @user.save
       # send activation link to user email

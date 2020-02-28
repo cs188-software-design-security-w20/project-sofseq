@@ -18,6 +18,9 @@ gem 'webpacker',            '4.0.7'
 # By hashing the password with bcrypt, we ensure that an attacker won’t be able
 # to log in to the site even if they manage to obtain a copy of the database.
 gem 'bcrypt',               '3.1.12'
+gem 'symmetric_encryption', require: false
+
+gem 'encryption'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 # Use Puma as the app server

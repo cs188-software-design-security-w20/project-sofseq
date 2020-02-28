@@ -26811,3 +26811,981 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-02-27 16:40:57 -0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+Completed 200 OK in 5716ms (Views: 5710.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-27 16:41:28 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+Completed 200 OK in 1365ms (Views: 1353.7ms)
+
+
+Started GET "/login" for ::1 at 2020-02-27 16:41:30 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (338.8ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 398ms (Views: 396.6ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-27 16:41:33 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 73ms (Views: 50.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2020-02-27 16:41:48 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QCPYWibSsGNlznZxoMgMus+hN70s/O53Uzy4uuY7OQkOx363vIaS9C6du8hgQfm08YEfLWG8/b3YjNE5uHFMAQ==", "user"=>{"name"=>"hello", "email"=>"hello@world.com", "age"=>"11", "zipcode"=>"11", "country"=>"1adfasd", "language"=>"asdasd", "role"=>"Mentor", "goals"=>"asdad", "bio"=>"adasd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "hello@world.com"], ["LIMIT", 1]]
+  [1m[35mSQL (4.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "hello"], ["email", "hello@world.com"], ["age", 11], ["zipcode", 11], ["country", "1adfasd"], ["goals", "asdad"], ["created_at", "2020-02-28 00:41:48.929021"], ["updated_at", "2020-02-28 00:41:48.929021"], ["password_digest", "$2a$10$8PX1Q/H7E9Zim5bhhnGQ9Ojfavf4kAGPFbFdP8jKV7vmdGMJQ1ena"], ["language", "asdasd"], ["bio", "adasd"], ["activation_digest", "$2a$10$oNqjyy5935Yi7yxtPDagyOthhKNEH5QTHHhQkDZB.xN/Ik0KYVIcq"], ["role", "Mentor"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.3ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.4ms)
+UserMailer#account_activation: processed outbound mail in 179.2ms
+Sent mail to hello@world.com (11.4ms)
+Date: Thu, 27 Feb 2020 16:41:49 -0800
+From: noreply@refume.com
+To: hello@world.com
+Message-ID: <5e5861cd6eb0f_957e3fc535d1703830666@Howards-MacBook-Pro-2.local.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e5861cd6cb47_957e3fc535d17038305c6";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e5861cd6cb47_957e3fc535d17038305c6
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi hello,
+
+Welcome to RefuMe! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/5nNC5RQ78QnLAsD84QtYtg/edit?email=hello%40world.com
+
+
+----==_mimepart_5e5861cd6cb47_957e3fc535d17038305c6
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>RefuMe</h1>
+
+<p>Hi hello,</p>
+
+<p>
+Welcome to RefuMe! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/5nNC5RQ78QnLAsD84QtYtg/edit?email=hello%40world.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5e5861cd6cb47_957e3fc535d17038305c6--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 596ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/" for ::1 at 2020-02-27 16:41:49 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+Completed 200 OK in 78ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "hello"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "hello@gmail.com"], ["id", 38], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "activated" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2020-02-28 00:42:43.563992"], ["activated", "t"], ["id", 38]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/login" for ::1 at 2020-02-27 16:42:46 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (389.6ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+Completed 200 OK in 493ms (Views: 492.1ms)
+
+
+Started POST "/login" for ::1 at 2020-02-27 16:42:51 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t/PCbIvlQy5R8+GEwn9brMQaSASNcG2bg8rW3FoeuU6tzPUXKnTtVPOJLvcpTBKCvPXbZ4F39HQlcYjsnXpOjw==", "session"=>{"email"=>"hello@world.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hello@world.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 85ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-02-27 16:42:51 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 65ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-27 16:47:37 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 58ms (Views: 56.6ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-27 16:47:38 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 70ms (Views: 49.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for ::1 at 2020-02-27 16:47:58 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YsjrI60ReVF0JthXFHPpK6HTtsQCWln4Wsde2qzDvIAsLE3ON0Vbxj91Fe7U+hwln/OeVE8aSjLRdzdZ8onJiA==", "user"=>{"name"=>"barbar", "email"=>"bar@barbar.com", "age"=>"11", "zipcode"=>"111", "country"=>"sdfsd", "language"=>"sdfsf", "role"=>"Mentor", "goals"=>"sdfsf", "bio"=>"sdfdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `encrypt' for #<UsersController:0x00007f8a68d57718>):
+  
+app/controllers/users_controller.rb:49:in `block in create'
+app/controllers/users_controller.rb:48:in `create'
+Started POST "/users" for ::1 at 2020-02-27 16:48:52 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YsjrI60ReVF0JthXFHPpK6HTtsQCWln4Wsde2qzDvIAsLE3ON0Vbxj91Fe7U+hwln/OeVE8aSjLRdzdZ8onJiA==", "user"=>{"name"=>"barbar", "email"=>"bar@barbar.com", "age"=>"11", "zipcode"=>"111", "country"=>"sdfsd", "language"=>"sdfsf", "role"=>"Mentor", "goals"=>"sdfsf", "bio"=>"sdfdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "bar@barbar.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "barbar"], ["email", "bar@barbar.com"], ["age", 11], ["zipcode", 111], ["country", "sdfsd"], ["goals", "sdfsf"], ["created_at", "2020-02-28 00:48:52.933451"], ["updated_at", "2020-02-28 00:48:52.933451"], ["password_digest", "$2a$10$xH.B4lkG7avOIWjEupzwn.MGsTrlttHjP095tJANryq2M5hMo380."], ["language", "sdfsf"], ["bio", "sdfdf"], ["activation_digest", "$2a$10$iH4ktC47O9KqW11vktjBXuvwGmiT8pIHMOb/Kw6s9l5tSr2GKzIhu"], ["role", "Mentor"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.1ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.4ms)
+UserMailer#account_activation: processed outbound mail in 145.9ms
+Sent mail to bar@barbar.com (7.5ms)
+Date: Thu, 27 Feb 2020 16:48:53 -0800
+From: noreply@refume.com
+To: bar@barbar.com
+Message-ID: <5e586375941fd_957f3fc535d16ebc8584e@Howards-MacBook-Pro-2.local.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e58637592ceb_957f3fc535d16ebc85749";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e58637592ceb_957f3fc535d16ebc85749
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi barbar,
+
+Welcome to RefuMe! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/4R7Am1jCZd4YM_2HaCLc7w/edit?email=bar%40barbar.com
+
+
+----==_mimepart_5e58637592ceb_957f3fc535d16ebc85749
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>RefuMe</h1>
+
+<p>Hi barbar,</p>
+
+<p>
+Welcome to RefuMe! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/4R7Am1jCZd4YM_2HaCLc7w/edit?email=bar%40barbar.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5e58637592ceb_957f3fc535d16ebc85749--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 758ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/" for ::1 at 2020-02-27 16:48:54 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-27 16:54:29 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 55ms (Views: 53.5ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-27 16:54:30 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.9ms)
+  Rendered users/new.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 57ms (Views: 35.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2020-02-27 16:54:48 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SaOYVv3KZWXuAVGK82Tc930fufFYkjhjsHAi8nrzIizwiiMwaMLAtzryP/rRGZ949RWd4giWysFcakIl6G5gA==", "user"=>{"name"=>"dogdog", "email"=>"dog@cat.com", "age"=>"11", "zipcode"=>"11", "country"=>"asdff", "language"=>"sdfsf", "role"=>"Mentor", "goals"=>"sdfsdf", "bio"=>"sdfsf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "dog@cat.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "dogdog"], ["email", "dog@cat.com"], ["age", 11], ["zipcode", 11], ["country", "asdff"], ["goals", "sdfsdf"], ["created_at", "2020-02-28 00:54:48.127313"], ["updated_at", "2020-02-28 00:54:48.127313"], ["password_digest", "$2a$10$bJCUPpFsg85KbBqxwYBHV.0QHneLFaBmrJcanVtBcquEZjqg4cv52"], ["language", "sdfsf"], ["bio", "sdfsf"], ["activation_digest", "$2a$10$5e5DQuKBSZx6nb3x1nOuSO.24jFy3XcI3d/NMWC27Jb9Bf/rVnO9C"], ["role", "Mentor"]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.1ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.6ms)
+UserMailer#account_activation: processed outbound mail in 10.2ms
+Sent mail to dog@cat.com (2.8ms)
+Date: Thu, 27 Feb 2020 16:54:48 -0800
+From: noreply@refume.com
+To: dog@cat.com
+Message-ID: <5e5864d83319a_957e3fc535d16e0830839@Howards-MacBook-Pro-2.local.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e5864d8329e2_957e3fc535d16e08307bd";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e5864d8329e2_957e3fc535d16e08307bd
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi dogdog,
+
+Welcome to RefuMe! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/UfFT9SmkN_RFB8zC5-AbbA/edit?email=dog%40cat.com
+
+
+----==_mimepart_5e5864d8329e2_957e3fc535d16e08307bd
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>RefuMe</h1>
+
+<p>Hi dogdog,</p>
+
+<p>
+Welcome to RefuMe! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/UfFT9SmkN_RFB8zC5-AbbA/edit?email=dog%40cat.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5e5864d8329e2_957e3fc535d16e08307bd--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 144ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/" for ::1 at 2020-02-27 16:54:48 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-27 16:55:42 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 74ms (Views: 72.1ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-27 16:55:44 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 124ms (Views: 95.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2020-02-27 16:56:16 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EVeZOvocNu+NTVaAMyZ3Y/brfjjr+KFOSxFD65g1ezJfsz/XYEgUeMYemznzr4JtyMtWqKa4soTAoSpoxn8OOg==", "user"=>{"name"=>"cat", "email"=>"cat@cat.com", "age"=>"11", "zipcode"=>"111", "country"=>"safsd", "language"=>"sdfsdf", "role"=>"Mentor", "goals"=>"sdfsf", "bio"=>"sdfsf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "cat@cat.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "cat"], ["email", "cat@cat.com"], ["age", 11], ["zipcode", 111], ["country", "safsd"], ["goals", "sdfsf"], ["created_at", "2020-02-28 00:56:16.070814"], ["updated_at", "2020-02-28 00:56:16.070814"], ["password_digest", "$2a$10$05gqCAkeBIuQRlLJmI0w8.I9ZMBV20QPNCWEL01N/aPDnHTz2Re5e"], ["language", "sdfsdf"], ["bio", "sdfsf"], ["activation_digest", "$2a$10$87H..mZqHUzrhzTZTad7veveju6gnlOlSQAW6aqY46pcxvh0rQHaS"], ["role", "Mentor"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.2ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.6ms)
+UserMailer#account_activation: processed outbound mail in 11.5ms
+Sent mail to cat@cat.com (2.8ms)
+Date: Thu, 27 Feb 2020 16:56:16 -0800
+From: noreply@refume.com
+To: cat@cat.com
+Message-ID: <5e58653025c7f_957e3fc535d16e0831048@Howards-MacBook-Pro-2.local.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e586530253fc_957e3fc535d16e08309c7";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e586530253fc_957e3fc535d16e08309c7
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi cat,
+
+Welcome to RefuMe! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/HiVHj9hmWqsdD52SLuZsKg/edit?email=cat%40cat.com
+
+
+----==_mimepart_5e586530253fc_957e3fc535d16e08309c7
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>RefuMe</h1>
+
+<p>Hi cat,</p>
+
+<p>
+Welcome to RefuMe! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/HiVHj9hmWqsdD52SLuZsKg/edit?email=cat%40cat.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5e586530253fc_957e3fc535d16e08309c7--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 147ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/" for ::1 at 2020-02-27 16:56:16 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 66ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-27 16:57:32 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 90ms (Views: 89.3ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-27 16:57:34 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 67ms (Views: 40.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for ::1 at 2020-02-27 16:57:48 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FR7dWMx8eaCwda3XwjA3fTG/rhW3QaWlsCtVXhZLY41b+nu1VihbN/smYG4CucJzD5+GhfoBtm87mzzdSAEWhQ==", "user"=>{"name"=>"bbgun", "email"=>"bb@gun.com", "age"=>"11", "zipcode"=>"111", "country"=>"sdsdf", "language"=>"sdfsdf", "role"=>"Mentor", "goals"=>"sdfsf", "bio"=>"sdfsf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `encrypted_user_params' for #<UsersController:0x00007f8a68fd5620>):
+  
+app/controllers/users_controller.rb:48:in `block in create'
+app/controllers/users_controller.rb:47:in `create'
+Started POST "/users" for ::1 at 2020-02-27 16:58:01 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FR7dWMx8eaCwda3XwjA3fTG/rhW3QaWlsCtVXhZLY41b+nu1VihbN/smYG4CucJzD5+GhfoBtm87mzzdSAEWhQ==", "user"=>{"name"=>"bbgun", "email"=>"bb@gun.com", "age"=>"11", "zipcode"=>"111", "country"=>"sdsdf", "language"=>"sdfsdf", "role"=>"Mentor", "goals"=>"sdfsf", "bio"=>"sdfsf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "bb@gun.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "bbgun"], ["email", "bb@gun.com"], ["age", 11], ["zipcode", 111], ["country", "sdsdf"], ["goals", "sdfsf"], ["created_at", "2020-02-28 00:58:01.484831"], ["updated_at", "2020-02-28 00:58:01.484831"], ["password_digest", "$2a$10$arKawAZHCDUG1xV3voni0OPjZjdjT0Et06bTKQYOh8cYEZS21i6Ea"], ["language", "sdfsdf"], ["bio", "sdfsf"], ["activation_digest", "$2a$10$4QaaOUtSoN/YYR6lFHmjFeVH4gWfaXjofY9VXxjXiLxx/NqmRw6Vm"], ["role", "Mentor"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (0.9ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.3ms)
+UserMailer#account_activation: processed outbound mail in 8.1ms
+Sent mail to bb@gun.com (2.4ms)
+Date: Thu, 27 Feb 2020 16:58:01 -0800
+From: noreply@refume.com
+To: bb@gun.com
+Message-ID: <5e5865998842e_957e3fc535d16e08312af@Howards-MacBook-Pro-2.local.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e58659987d51_957e3fc535d16e08311ec";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e58659987d51_957e3fc535d16e08311ec
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi bbgun,
+
+Welcome to RefuMe! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/GH-C__8z61PkGqSUNBg1Bw/edit?email=bb%40gun.com
+
+
+----==_mimepart_5e58659987d51_957e3fc535d16e08311ec
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>RefuMe</h1>
+
+<p>Hi bbgun,</p>
+
+<p>
+Welcome to RefuMe! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/GH-C__8z61PkGqSUNBg1Bw/edit?email=bb%40gun.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5e58659987d51_957e3fc535d16e08311ec--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 151ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-27 16:58:02 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 64ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-27 16:59:44 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 71ms (Views: 69.3ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-27 16:59:45 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 91ms (Views: 67.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for ::1 at 2020-02-27 16:59:58 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F5ylk1CA9SBjxCflv5MdPtpulMswo5yj3XHsS5dB51ZZeAN+ytTXtyiX6lx/Gugw5E68W33jj2lWwYXIyQuSXg==", "user"=>{"name"=>"machine", "email"=>"machine@gun.com", "age"=>"11", "zipcode"=>"111", "country"=>"sdfdf", "language"=>"sdfsdf", "role"=>"Mentor", "goals"=>"sdfsf", "bio"=>"sdfsdfs", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "machine@gun.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "machine"], ["email", "machine@gun.com"], ["age", 11], ["zipcode", 111], ["country", "sdfdf"], ["goals", "sdfsf"], ["created_at", "2020-02-28 00:59:58.554682"], ["updated_at", "2020-02-28 00:59:58.554682"], ["password_digest", "$2a$10$aepwI2bAQTS8L/NSgusvee3Gr1KeHeQOmYGDz2Zdch84aLz.wknBm"], ["language", "sdfsdf"], ["bio", "sdfsdfs"], ["activation_digest", "$2a$10$NteRKuaAm3QQh1e76QKbcOHtw5kckWaDD2w.gRk9Rlhxdxi2GMBNW"], ["role", "Mentor"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.2ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.9ms)
+UserMailer#account_activation: processed outbound mail in 11.7ms
+Sent mail to machine@gun.com (3.5ms)
+Date: Thu, 27 Feb 2020 16:59:58 -0800
+From: noreply@refume.com
+To: machine@gun.com
+Message-ID: <5e58660e9a982_957f3fc535d16ebc860f6@Howards-MacBook-Pro-2.local.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e58660e99dc2_957f3fc535d16ebc8594a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e58660e99dc2_957f3fc535d16ebc8594a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi machine,
+
+Welcome to RefuMe! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/V1dVhKqEFel2dZNaJAFG5Q/edit?email=machine%40gun.com
+
+
+----==_mimepart_5e58660e99dc2_957f3fc535d16ebc8594a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>RefuMe</h1>
+
+<p>Hi machine,</p>
+
+<p>
+Welcome to RefuMe! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/V1dVhKqEFel2dZNaJAFG5Q/edit?email=machine%40gun.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5e58660e99dc2_957f3fc535d16ebc8594a--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 148ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2020-02-27 16:59:58 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-27 17:03:21 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 137ms (Views: 135.3ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-27 17:03:23 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 52ms (Views: 34.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for ::1 at 2020-02-27 17:03:40 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eQjgzLCnlRYT6XOL9kzG01RjPRhkWrh8kgPb+WuWFXU37EYhKvO3gVi6vjI2xTPdakMViCkaq7YZs7J6NdxgfQ==", "user"=>{"name"=>"bbbb", "email"=>"bbbb@g.com", "age"=>"11", "zipcode"=>"111", "country"=>"sdfdf", "language"=>"sfsdf", "role"=>"Mentor", "goals"=>"sdfsf", "bio"=>"sdfsdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "bbbb@g.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "bbbb"], ["email", "bbbb@g.com"], ["age", 11], ["zipcode", 111], ["country", "sdfdf"], ["goals", "sdfsf"], ["created_at", "2020-02-28 01:03:40.958962"], ["updated_at", "2020-02-28 01:03:40.958962"], ["password_digest", "$2a$10$3ddqLMmK0HqN7YN288MhYeKge3iLnD6xMcCz4ZXUMgXQwG9TN/2hW"], ["language", "sfsdf"], ["bio", "sdfsdf"], ["activation_digest", "$2a$10$tfT6.jKJY6uewyS4xzZy/.YM2zeNdGtZbjVu6tYzcnr83ZcaOTWVK"], ["role", "Mentor"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.1ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.5ms)
+UserMailer#account_activation: processed outbound mail in 11.0ms
+Sent mail to bbbb@g.com (3.0ms)
+Date: Thu, 27 Feb 2020 17:03:41 -0800
+From: noreply@refume.com
+To: bbbb@g.com
+Message-ID: <5e5866eda56f_957f3fc535d16e308628c@Howards-MacBook-Pro-2.local.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e5866ed9d5e_957f3fc535d16e3086184";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e5866ed9d5e_957f3fc535d16e3086184
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi bbbb,
+
+Welcome to RefuMe! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/fcGE9M_IhS0NMCfgACkdyg/edit?email=bbbb%40g.com
+
+
+----==_mimepart_5e5866ed9d5e_957f3fc535d16e3086184
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>RefuMe</h1>
+
+<p>Hi bbbb,</p>
+
+<p>
+Welcome to RefuMe! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/fcGE9M_IhS0NMCfgACkdyg/edit?email=bbbb%40g.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5e5866ed9d5e_957f3fc535d16e3086184--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 148ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/" for ::1 at 2020-02-27 17:03:41 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-27 17:05:55 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 131ms (Views: 129.9ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-27 17:05:56 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 56ms (Views: 38.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for ::1 at 2020-02-27 17:06:09 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mvsQN9RSdWVYuC2OkkNQJl0mf599czSxCWu2yYcA4+bUH7baTgZX8hPr4DdSyqUoYwZXDzAzJ3uC299K2UqW7g==", "user"=>{"name"=>"hhh", "email"=>"hhh@gmail.com", "age"=>"11", "zipcode"=>"111", "country"=>"sdfsdf", "language"=>"sdfsf", "role"=>"Mentor", "goals"=>"sdfsf", "bio"=>"sdfsf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "hhh@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "hhh"], ["email", "hhh@gmail.com"], ["age", 11], ["zipcode", 111], ["country", "sdfsdf"], ["goals", "sdfsf"], ["created_at", "2020-02-28 01:06:09.903238"], ["updated_at", "2020-02-28 01:06:09.903238"], ["password_digest", "$2a$10$TwmdJ.Mjsu5bPJJprdOb8eCxlO0M8Z4HQIKydkeweP0Uqf/4q04kK"], ["language", "sdfsf"], ["bio", "sdfsf"], ["activation_digest", "$2a$10$85R1e4wPHANkYUB/mfOa6OCboio.tExtBmsMHqMeKiuqk2W2975Qy"], ["role", "Mentor"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.5ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (1.0ms)
+UserMailer#account_activation: processed outbound mail in 12.1ms
+Sent mail to hhh@gmail.com (4.5ms)
+Date: Thu, 27 Feb 2020 17:06:09 -0800
+From: noreply@refume.com
+To: hhh@gmail.com
+Message-ID: <5e586781f0520_957e3fc535d16e0831421@Howards-MacBook-Pro-2.local.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e586781ef815_957e3fc535d16e08313a6";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e586781ef815_957e3fc535d16e08313a6
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi hhh,
+
+Welcome to RefuMe! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/DCbHSdv6Uxx0sY_MnoSoVg/edit?email=hhh%40gmail.com
+
+
+----==_mimepart_5e586781ef815_957e3fc535d16e08313a6
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>RefuMe</h1>
+
+<p>Hi hhh,</p>
+
+<p>
+Welcome to RefuMe! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/DCbHSdv6Uxx0sY_MnoSoVg/edit?email=hhh%40gmail.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5e586781ef815_957e3fc535d16e08313a6--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 146ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for ::1 at 2020-02-27 17:06:10 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-27 17:06:59 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 105ms (Views: 104.0ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-27 17:07:00 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 59ms (Views: 40.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for ::1 at 2020-02-27 17:07:12 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kAI78IzhmLchSh/nnPbCXkWYPt0WY/gIZ3nkqWAP7P7e5p0dFrW6IGoZ0l5cfzdQe7gWTVsj68LsyY0qPkWZ9g==", "user"=>{"name"=>"vvv", "email"=>"vvv@gmail.com", "age"=>"11", "zipcode"=>"111", "country"=>"dsfdf", "language"=>"sdfsf", "role"=>"Mentor", "goals"=>"wdfsdf", "bio"=>"sdfsf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "vvv@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "age", "zipcode", "country", "goals", "created_at", "updated_at", "password_digest", "language", "bio", "activation_digest", "role") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "vvv"], ["email", "vvv@gmail.com"], ["age", 11], ["zipcode", 111], ["country", "dsfdf"], ["goals", "wdfsdf"], ["created_at", "2020-02-28 01:07:12.670111"], ["updated_at", "2020-02-28 01:07:12.670111"], ["password_digest", "$2a$10$drUa6mMIyDL9jEXRA62GYO.0NFQpcR1p8zKFjDb8yH36nQ2QBAu52"], ["language", "sdfsf"], ["bio", "sdfsf"], ["activation_digest", "$2a$10$pclkQuRYGZQ5VHDsv93aUux.4os5ro8y2fqGk2.llcj0zYouYXCuW"], ["role", "Mentor"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (0.9ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.4ms)
+UserMailer#account_activation: processed outbound mail in 10.6ms
+Sent mail to vvv@gmail.com (2.3ms)
+Date: Thu, 27 Feb 2020 17:07:12 -0800
+From: noreply@refume.com
+To: vvv@gmail.com
+Message-ID: <5e5867c0b89fc_957e3fc535d16f20316bc@Howards-MacBook-Pro-2.local.mail>
+Subject: Account activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5e5867c0b8304_957e3fc535d16f203153b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5e5867c0b8304_957e3fc535d16f203153b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi vvv,
+
+Welcome to RefuMe! Click on the link below to activate your account:
+
+http://localhost:3000/account_activations/VMiBHTWSUm2A-VC_J0wm0Q/edit?email=vvv%40gmail.com
+
+
+----==_mimepart_5e5867c0b8304_957e3fc535d16f203153b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>RefuMe</h1>
+
+<p>Hi vvv,</p>
+
+<p>
+Welcome to RefuMe! Click on the link below to activate your account:
+</p>
+
+<a href="http://localhost:3000/account_activations/VMiBHTWSUm2A-VC_J0wm0Q/edit?email=vvv%40gmail.com">Activate</a>
+
+  </body>
+</html>
+
+----==_mimepart_5e5867c0b8304_957e3fc535d16f203153b--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 150ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/" for ::1 at 2020-02-27 17:07:12 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-02-27 17:07:46 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 47ms (Views: 46.0ms)
+
+
+Started GET "/signup" for ::1 at 2020-02-27 17:07:48 -0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 61ms (Views: 35.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for ::1 at 2020-02-27 17:08:00 -0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l2XRHX5SgsQhzk3AbQFuhqa4YHkv9j72on3aAjDpmmXZgXfw5AagU2qdgHmtiJuImJhI6WK2LTwpzbOBbqPvbQ==", "user"=>{"name"=>"ppp", "email"=>"ppp@gmail.com", "age"=>"11", "zipcode"=>"111", "country"=>"as", "language"=>"asd", "role"=>"Mentor", "goals"=>"sad", "bio"=>"asd", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.2ms)
+
+
+  
+Encoding::UndefinedConversionError ("\xEF" from ASCII-8BIT to UTF-8):
+  
+app/controllers/users_controller.rb:62:in `create'
+Started GET "/" for ::1 at 2020-02-27 17:50:55 -0800
+  
+ActionController::RoutingError (uninitialized constant UsersHelper::SymmetricEncryption):
+  
+app/helpers/users_helper.rb:40:in `<module:UsersHelper>'
+app/helpers/users_helper.rb:1:in `<top (required)>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2020-02-27 17:50:56 -0800
+  
+ActionController::RoutingError (uninitialized constant UsersHelper::SymmetricEncryption):
+  
+app/helpers/users_helper.rb:40:in `<module:UsersHelper>'
+app/helpers/users_helper.rb:1:in `<top (required)>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/static_pages_controller.rb:1:in `<top (required)>'
